@@ -185,6 +185,38 @@ mixin _$EditProfileStore on _EditProfileStoreBase, Store {
     });
   }
 
+  late final _$momURLAtom =
+      Atom(name: '_EditProfileStoreBase.momURL', context: context);
+
+  @override
+  String get momURL {
+    _$momURLAtom.reportRead();
+    return super.momURL;
+  }
+
+  @override
+  set momURL(String value) {
+    _$momURLAtom.reportWrite(value, super.momURL, () {
+      super.momURL = value;
+    });
+  }
+
+  late final _$escolhaUserAtom =
+      Atom(name: '_EditProfileStoreBase.escolhaUser', context: context);
+
+  @override
+  String? get escolhaUser {
+    _$escolhaUserAtom.reportRead();
+    return super.escolhaUser;
+  }
+
+  @override
+  set escolhaUser(String? value) {
+    _$escolhaUserAtom.reportWrite(value, super.escolhaUser, () {
+      super.escolhaUser = value;
+    });
+  }
+
   @override
   String toString() {
     return '''
@@ -198,7 +230,9 @@ gestation: ${gestation},
 kidPhoto: ${kidPhoto},
 momPhoto: ${momPhoto},
 upload: ${upload},
-photoURL: ${photoURL}
+photoURL: ${photoURL},
+momURL: ${momURL},
+escolhaUser: ${escolhaUser}
     ''';
   }
 }

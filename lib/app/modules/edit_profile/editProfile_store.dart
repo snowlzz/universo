@@ -56,6 +56,9 @@ abstract class _EditProfileStoreBase with Store {
   String photoURL = '';
 
   @observable
+  String momURL = '';
+
+  @observable
   String? escolhaUser;
 
   // SAVE DB

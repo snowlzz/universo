@@ -58,7 +58,7 @@ class CrescimentoPageState extends State<CrescimentoPage> {
                       elevation: 20,
                       color: Colors.white,
                       child: Padding(
-                        padding: EdgeInsets.all(15.0),
+                        padding: const EdgeInsets.all(15.0),
                         child: Text(
                             '' '${reg.controllerName.text}! \n'
                                 'O crescimento saudável é alcançado com uma alimentação adequada  '
@@ -71,7 +71,7 @@ class CrescimentoPageState extends State<CrescimentoPage> {
                                 ' infantil.''O crescimento saudável é alcançado com uma alimentação adequada  '
                                 'principalmente nos dois primeiros anos de vida. Preparamos um material para auxiliá-la nesse processo.',
                                 textAlign: TextAlign.justify,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w500,
                                   color: Color.fromARGB(255, 35, 85, 24)
