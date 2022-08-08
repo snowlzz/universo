@@ -2,6 +2,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 import 'modules/crescimento/crescimento_module.dart';
 import 'modules/crescimento/crescimento_store.dart';
+import 'modules/crescimento/material/tip/tip_module.dart';
 import 'modules/desenvolvimento/desenvolvimento_module.dart';
 import 'modules/desenvolvimento/desenvolvimento_store.dart';
 import 'modules/edit_profile/editProfile_module.dart';
@@ -34,6 +35,7 @@ class AppModule extends Module {
     ModuleRoute('/profile', module: ProfileModule()),
     ModuleRoute('/desenvolvimento', module: DesenvolvimentoModule()),
     ModuleRoute('/crescimento', module: CrescimentoModule()),
+    ModuleRoute('/tip', module: TipModule()),
     ModuleRoute('/editprofile', module: EditProfileModule()),
   ];
 

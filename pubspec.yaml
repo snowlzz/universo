@@ -73,6 +73,10 @@ flutter:
   assets:
     - images/logo/LogoMov.gif
     - images/rest/
+    - images/crescimento/1-4/
+    - images/
+    - images/rest/46 IMAGEM 01.png
+    - images1/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

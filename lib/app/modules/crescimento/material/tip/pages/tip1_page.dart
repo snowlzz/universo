@@ -24,7 +24,7 @@ class Tip1PageState extends State<Tip1Page> {
         ),
       ),
       body: ListView(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         children: <Widget>[
           const SizedBox(height: 30.0,),
           const Text(
@@ -55,8 +55,8 @@ class Tip1PageState extends State<Tip1Page> {
               'sua casa, você vai encontrar profissionais capacitados para lhe '
               'orientar, para que você consiga continuar amamentando.')),
 
-          SizedBox(height: 30.0,),
-          SizedBox(height: 30.0,),
+          const SizedBox(height: 30.0,),
+          const SizedBox(height: 30.0,),
         ],
       ),
     );

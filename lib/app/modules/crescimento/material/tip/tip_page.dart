@@ -14,7 +14,7 @@ class TipPageState extends State<TipPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-            appBar: AppBar(
+        appBar: AppBar(
         title: const Text("Crescimento"), 
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 255, 193, 143),
@@ -22,7 +22,7 @@ class TipPageState extends State<TipPage> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new),
           onPressed: (){
-             Navigator.pushReplacementNamed(context, '/home/nav');
+             Modular.to.popAndPushNamed("/crescimento");
           },
         ),
       ),
@@ -44,7 +44,9 @@ class TipPageState extends State<TipPage> {
               crossAxisSpacing: 30,
               children: [
                 ElevatedButton(
-                  onPressed: (){Navigator.pushReplacementNamed(context, '/tip/tip1');}, 
+                  onPressed: (){
+                    Modular.to.pushNamed("/tip/tip1");
+                  }, 
                   child: const Text(
                     "Dicas iniciais para as mamães",
                     textAlign: TextAlign.center,
@@ -66,7 +68,7 @@ class TipPageState extends State<TipPage> {
                     )),
 
                 ElevatedButton(
-                  onPressed: (){Navigator.pushReplacementNamed(context, '/tip/tip3');}, 
+                  onPressed: (){Modular.to.pushNamed('/tip/tip3');}, 
                   child: const Text(
                     "Cuidados com a mama",
                     textAlign: TextAlign.center,
@@ -77,7 +79,7 @@ class TipPageState extends State<TipPage> {
                     )),
 
                 ElevatedButton(
-                  onPressed: (){Navigator.pushReplacementNamed(context, '/tip/tip4');}, 
+                  onPressed: (){Modular.to.pushNamed('/tip/tip4');}, 
                   child: const Text(
                     "Posições da criança durante o aleitamento",
                     textAlign: TextAlign.center,
@@ -88,7 +90,7 @@ class TipPageState extends State<TipPage> {
                     )),
                     
                 ElevatedButton(
-                  onPressed: (){Navigator.pushReplacementNamed(context, '/tip/tip5');}, 
+                  onPressed: (){Modular.to.pushNamed('/tip/tip5');}, 
                   child: const Text(
                     "Posições da mamãe para amamentação",
                     textAlign: TextAlign.center,
@@ -98,7 +100,7 @@ class TipPageState extends State<TipPage> {
                     ),
                     )),
                 ElevatedButton(
-                  onPressed: (){Navigator.pushReplacementNamed(context, '/tip/tip6');}, 
+                  onPressed: (){Modular.to.pushNamed('/tip/tip6');}, 
                   child: const Text(
                     "Pega da criança ao seio - Correta e Incorreta",
                     textAlign: TextAlign.center,
@@ -108,7 +110,7 @@ class TipPageState extends State<TipPage> {
                     ),
                     )),
                 ElevatedButton(
-                  onPressed: (){Navigator.pushReplacementNamed(context, '/tip/tip7');}, 
+                  onPressed: (){Modular.to.pushNamed('/tip/tip7');}, 
                   child: const Text(
                     "Inicio da mamada",
                     textAlign: TextAlign.center,
@@ -118,7 +120,7 @@ class TipPageState extends State<TipPage> {
                     ),
                     )),
                 ElevatedButton(
-                  onPressed: (){Navigator.pushReplacementNamed(context, '/tip/tip8');}, 
+                  onPressed: (){Modular.to.pushNamed('/tip/tip8');}, 
                   child: const Text(
                     "Passo a passo para a amamentação",
                     textAlign: TextAlign.center,
@@ -129,7 +131,7 @@ class TipPageState extends State<TipPage> {
                     )),
 
                 ElevatedButton(
-                  onPressed: (){}, 
+                  onPressed: (){Modular.to.pushNamed("/tip/tip9");}, 
                   child: const Text(
                     "Aleitamento materno em livre demanda",
                     textAlign: TextAlign.center,
@@ -140,7 +142,7 @@ class TipPageState extends State<TipPage> {
                     
                     )),
                 ElevatedButton(
-                  onPressed: (){}, 
+                  onPressed: (){Modular.to.pushNamed("/tip/tip10");}, 
                   child: const Text(
                     "Técnicas que auxiliam a amamentação",
                     textAlign: TextAlign.center,
@@ -151,7 +153,7 @@ class TipPageState extends State<TipPage> {
                     )),
 
                 ElevatedButton(
-                  onPressed: (){}, 
+                  onPressed: (){Modular.to.pushNamed("/tip/tip11");}, 
                   child: const Text(
                     "Principais problemas relacionados a mama",
                     textAlign: TextAlign.center,
@@ -162,7 +164,7 @@ class TipPageState extends State<TipPage> {
                     )),
 
                 ElevatedButton(
-                  onPressed: (){}, 
+                  onPressed: (){Modular.to.pushNamed("/tip/tip12");}, 
                   child: const Text(
                     "Final da mamada",
                     textAlign: TextAlign.center,
@@ -174,7 +176,7 @@ class TipPageState extends State<TipPage> {
 
 
                 ElevatedButton(
-                  onPressed: (){}, 
+                  onPressed: (){Modular.to.pushNamed("/tip/tip13");}, 
                   child: const Text(
                     "Verdades e mitos sobre a amamentação",
                     textAlign: TextAlign.center,
@@ -185,7 +187,7 @@ class TipPageState extends State<TipPage> {
                     )),
 
                 ElevatedButton(
-                  onPressed: (){}, 
+                  onPressed: (){Modular.to.pushNamed("/tip/tip14");}, 
                   child: const Text(
                     "Retorno ao trabalho",
                     textAlign: TextAlign.center,
@@ -196,7 +198,7 @@ class TipPageState extends State<TipPage> {
                     )),
 
                 ElevatedButton(
-                  onPressed: (){}, 
+                  onPressed: (){Modular.to.pushNamed("/tip/tip15");}, 
                   child: const Text(
                     "Perguntas sobre a amamentação e o uso do app",
                     textAlign: TextAlign.center,
@@ -227,22 +229,14 @@ class TipPageState extends State<TipPage> {
                       fontWeight: FontWeight.w600
                     ),
                     )),
-                
-                
-                
-                
-                
-
-
-
 
                     SizedBox(
                   height: 50, 
                   child: OutlinedButton(
                     onPressed: (){
-                    Modular.to.pushNamed("/home/nav");
+                    Modular.to.pushNamed("/home/");
                   },
-                  child: Text("Home")
+                  child: const Text("Home")
                   ),
                 ),
 

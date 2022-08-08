@@ -31,8 +31,9 @@ class InitialPageState extends State<InitialPage> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.fromLTRB(20, 40, 20, 10),
-                    child: Image.asset("images/logo/LogoMov.gif", width: 250),
+                    child: Image.asset("images/logo/LogoMov.gif", width: 290),
                   ),
+                  SizedBox(height: 20),
                   Padding(
                     padding: const EdgeInsets.only(top: 30, left: 50, right: 50, bottom: 0),
                     child: 
@@ -71,6 +72,8 @@ class InitialPageState extends State<InitialPage> {
                       }
                     )
                   ),
+
+                  SizedBox(height: 50),
 
                   Padding(
                     padding: const EdgeInsets.only(top: 5),

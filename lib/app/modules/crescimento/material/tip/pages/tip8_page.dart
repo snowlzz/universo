@@ -25,7 +25,7 @@ class Tip8PageState extends State<Tip8Page> {
         ),
       ),
       body: ListView(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         children: <Widget>[
           const SizedBox(height: 30.0,),
           const Text(
@@ -37,7 +37,7 @@ class Tip8PageState extends State<Tip8Page> {
             ),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: 30.0,),
+          const SizedBox(height: 30.0,),
           imageContent('images/crescimento/1-4/initial5.jpg',
             textContent('',
                 '\u27A2A criança prematura apresenta mais dificuldade em pegar a'
@@ -77,8 +77,8 @@ class Tip8PageState extends State<Tip8Page> {
                     'depois oferecer o outro.'),
           ),
 
-          SizedBox(height: 30.0,),
-          SizedBox(height: 30.0,),
+          const SizedBox(height: 30.0,),
+          const SizedBox(height: 30.0,),
         ],
       )
     );

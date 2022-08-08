@@ -1,4 +1,4 @@
-// ignore_for_file: file_names, library_private_types_in_public_api, no_leading_underscores_for_local_identifiers
+// ignore_for_file: file_names, library_private_types_in_public_api, no_leading_underscores_for_local_identifiers, avoid_print
 
 import 'dart:io';
 
@@ -90,12 +90,12 @@ abstract class _EditProfileStoreBase with Store {
 
   // CORRECTED AGE
 
-  Future<int> correctAge() async {
-    int? idadeCorrigida;
-    idadeCorrigida = int.tryParse(controllerBirth.text.substring(1, 40))! - gestation - int.tryParse(controllerWeeks.text.substring(20, 40))!;
-    print(idadeCorrigida);    
-    return idadeCorrigida;
-  }
+  // Future<int> correctAge() async {
+  //   int? idadeCorrigida;
+  //   idadeCorrigida = int.tryParse(controllerBirth.text.substring(1, 40))! - gestation - int.tryParse(controllerWeeks.text.substring(20, 40))!;
+  //   print(idadeCorrigida);    
+  //   return idadeCorrigida;
+  // }
 
   // Kid's photo
   
@@ -180,6 +180,10 @@ abstract class _EditProfileStoreBase with Store {
   Future recoveryPhotoURL(TaskSnapshot taskSnapshot) async {
     String url = await taskSnapshot.ref.getDownloadURL();
     photoURL = url;
+  }
+  Future recoveryMomPhotoURL(TaskSnapshot taskSnapshot) async {
+    String url = await taskSnapshot.ref.getDownloadURL();
+    momURL = url;
   }
 
   

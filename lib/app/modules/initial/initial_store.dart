@@ -11,7 +11,7 @@ part 'initial_store.g.dart';
 class InitialStore = _InitialStoreBase with _$InitialStore;
 abstract class _InitialStoreBase with Store {
 
-  FirebaseAuth auth = FirebaseAuth.instance;
+  
 
   @observable
   TextEditingController controllerEmail = TextEditingController();
