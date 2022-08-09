@@ -1,5 +1,6 @@
 
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:universo/app/modules/crescimento/material/tip/pages/tip15_page.dart';
 import 'package:universo/app/modules/crescimento/material/tip/pages/tip5_page.dart';
 import 'package:universo/app/modules/crescimento/material/tip/pages/tip6_page.dart';
 import 'package:universo/app/modules/crescimento/material/tip/tip_store.dart';
@@ -42,5 +43,6 @@ class TipModule extends Module {
     ChildRoute('/tip12', child: (_, args) => const Tip12Page()),
     ChildRoute('/tip13', child: (_, args) => const Tip13Page()),
     ChildRoute('/tip14', child: (_, args) => const Tip14Page()),
+    ChildRoute('/tip15', child: (_, args) => const Tip15Page()),
   ];
 }

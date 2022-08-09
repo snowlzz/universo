@@ -186,16 +186,16 @@ class TipPageState extends State<TipPage> {
                     ),
                     )),
 
-                ElevatedButton(
-                  onPressed: (){Modular.to.pushNamed("/tip/tip14");}, 
-                  child: const Text(
-                    "Retorno ao trabalho",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600
-                    ),
-                    )),
+                // ElevatedButton(
+                //   onPressed: (){Modular.to.pushNamed("/tip/tip14");}, 
+                //   child: const Text(
+                //     "Retorno ao trabalho",
+                //     textAlign: TextAlign.center,
+                //     style: TextStyle(
+                //       fontSize: 18,
+                //       fontWeight: FontWeight.w600
+                //     ),
+                //     )),
 
                 ElevatedButton(
                   onPressed: (){Modular.to.pushNamed("/tip/tip15");}, 
