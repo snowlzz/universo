@@ -18,6 +18,13 @@ class EditProfilePageState extends State<EditProfilePage> {
   gradient2(){
 return const LinearGradient(colors: [Color.fromARGB(255, 151, 115, 85), Color.fromARGB(255, 255, 193, 143)]);
     }
+
+    @override
+  void initState() {
+    // TODO: implement initState
+    // store.recuperaDados();
+    super.initState();
+  }
   final EditProfileStore store = Modular.get();
   KidModel model = KidModel();
 
@@ -35,7 +42,7 @@ return const LinearGradient(colors: [Color.fromARGB(255, 151, 115, 85), Color.fr
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Home"), 
+        title: const Text("Editar Perfil"), 
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 253, 158, 104),
         elevation: 0,
@@ -256,7 +263,7 @@ return const LinearGradient(colors: [Color.fromARGB(255, 151, 115, 85), Color.fr
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 TextField(
-                                  controller: store.controllerKidName,
+                                  controller: store.controllerMomName,
                                   decoration: InputDecoration(
                                     labelText: 'Nome',
                                     border: OutlineInputBorder(
@@ -267,7 +274,7 @@ return const LinearGradient(colors: [Color.fromARGB(255, 151, 115, 85), Color.fr
                                 const SizedBox(height: 10),
                                 TextField(
                                   inputFormatters: [maskDate],
-                                  controller: store.controllerBirth,
+                                  controller: store.controllerBirthMom,
                                   decoration: InputDecoration(
                                     labelText: 'Nascimento',
                                     hintText: "DD/MM/AAAA",
@@ -277,17 +284,6 @@ return const LinearGradient(colors: [Color.fromARGB(255, 151, 115, 85), Color.fr
                                   ),
                                 ),
                                 const SizedBox(height: 10),
-                                TextField(
-                                  inputFormatters: [maskGage],
-                                  controller: store.controllerWeeks,
-                                  decoration: InputDecoration(
-                                    labelText: 'Idade Gestacional',
-                                    hintText: "Semanas: ##, Dias: ##",
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(20)
-                                    )
-                                  ),
-                                ),
                                 
                               ]))))),
                               OutlinedButton(
