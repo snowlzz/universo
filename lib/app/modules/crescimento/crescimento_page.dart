@@ -2,6 +2,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:universo/app/modules/crescimento/crescimento_store.dart';
 import 'package:flutter/material.dart';
 
+import '../edit_profile/editProfile_store.dart';
 import '../models/user_model.dart';
 import '../register/register_store.dart';
 
@@ -14,6 +15,7 @@ class CrescimentoPage extends StatefulWidget {
 class CrescimentoPageState extends State<CrescimentoPage> {
   final CrescimentoStore store = Modular.get();
   final RegisterStore reg = Modular.get();
+  final EditProfileStore ep = Modular.get();
   UserModel user = UserModel();
 
 
@@ -24,6 +26,12 @@ class CrescimentoPageState extends State<CrescimentoPage> {
       appBar: AppBar(
         title: const Text("Crescimento"),
         centerTitle: true,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios_new),
+          onPressed: (){
+             Modular.to.pushReplacementNamed("/home/");
+          },
+        ),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -51,7 +59,7 @@ class CrescimentoPageState extends State<CrescimentoPage> {
                  Center(
                   child: SizedBox(
                     width: 350,
-                    height: MediaQuery.of(context).size.height/1.5,
+                    height: MediaQuery.of(context).size.height/2,
                     child: Card(
                       shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
@@ -60,7 +68,7 @@ class CrescimentoPageState extends State<CrescimentoPage> {
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Text(
-                            '' '${reg.controllerName.text}! \n'
+                            '' '${ep.controllerMomName.text}! \n'
                                 'O crescimento saudável é alcançado com uma alimentação adequada  '
                                 'principalmente nos dois primeiros anos de vida. O aleitamento '
                                 'materno surge como uma estratégia eficiente de nutrição, proteção,'
@@ -69,7 +77,7 @@ class CrescimentoPageState extends State<CrescimentoPage> {
                                 'Mesmo quando a amamentação não é possível, algumas estratégias '
                                 'podem servir de aliadas neste processo de transição para a fórmula'
                                 ' infantil.''O crescimento saudável é alcançado com uma alimentação adequada  '
-                                'principalmente nos dois primeiros anos de vida. Preparamos um material para auxiliá-la nesse processo.',
+                                'principalmente nos dois primeiros anos de vida. Preparamos um material para auxiliá-la neste processo.',
                                 textAlign: TextAlign.justify,
                                 style: const TextStyle(
                                   fontSize: 16,

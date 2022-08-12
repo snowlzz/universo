@@ -20,7 +20,7 @@ abstract class _InitialStoreBase with Store {
   TextEditingController controllerPass = TextEditingController();
 
   @observable
-  String? error;
+  String error = '';
   
   @observable
   bool loading = false;

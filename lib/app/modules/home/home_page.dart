@@ -70,7 +70,7 @@ Widget bottomNavigationBar() {
           ),
         BottomNavigationBarItem(
           icon: Icon(Icons.home_max_outlined),
-          label: "Desenvolvimento",
+          label: "Tarefas",
               
           ),
         BottomNavigationBarItem(
@@ -80,7 +80,7 @@ Widget bottomNavigationBar() {
           ),
         BottomNavigationBarItem(
           icon: Icon(Icons.settings_rounded),
-          label: "Configurações",
+          label: "Mais",
               
           ),
       ]

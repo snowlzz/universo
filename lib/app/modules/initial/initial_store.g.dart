@@ -45,13 +45,13 @@ mixin _$InitialStore on _InitialStoreBase, Store {
       Atom(name: '_InitialStoreBase.error', context: context);
 
   @override
-  String? get error {
+  String get error {
     _$errorAtom.reportRead();
     return super.error;
   }
 
   @override
-  set error(String? value) {
+  set error(String value) {
     _$errorAtom.reportWrite(value, super.error, () {
       super.error = value;
     });

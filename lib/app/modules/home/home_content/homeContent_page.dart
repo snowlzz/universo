@@ -5,6 +5,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:universo/app/modules/home/home_content/homeContent_store.dart';
 import 'package:flutter/material.dart';
 
+import '../../edit_profile/editProfile_store.dart';
 import '../../register/register_store.dart';
 
 class HomeContentPage extends StatefulWidget {
@@ -15,7 +16,7 @@ class HomeContentPage extends StatefulWidget {
 }
 class HomeContentPageState extends State<HomeContentPage> {
   final HomeContentStore store = Modular.get();
-  final RegisterStore reg = Modular.get();
+  final EditProfileStore ep = Modular.get();
 
 
 
@@ -55,7 +56,7 @@ class HomeContentPageState extends State<HomeContentPage> {
                     alignment: Alignment.topLeft,
                     child: Observer(
                       builder: (_) {
-                      return Text("Olá, ${reg.controllerName.text}", 
+                      return Text("Olá, ${ep.controllerMomName.text}!", 
                         style: const TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.w600,
@@ -65,31 +66,6 @@ class HomeContentPageState extends State<HomeContentPage> {
                     })),
                   ),
                   
-      //         SizedBox(
-      //           width: MediaQuery.of(context).size.width,
-      //           height: 275,
-      //           child: ListView(
-      //             scrollDirection: Axis.horizontal,
-      //             children: [
-      //       Card(
-      //           "Vegan",
-      //           "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/Resturant%20Image%20(1).png?alt=media&token=461162b1-686b-4b0e-a3ee-fae1cb8b5b33",
-      //           "8 min away",
-                
-      //           ),
-                
-      //       Card(
-      //           "Italian ",
-      //           "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/Restaurant%20Image.png?alt=media&token=43509b4c-269e-4279-8c88-36dc9ed27a66",
-      //           "12 min away"),
-      //       Card(
-      //           "Vegan",
-      //           "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/Resturant%20Image%20(1).png?alt=media&token=461162b1-686b-4b0e-a3ee-fae1cb8b5b33",
-      //           "15 min away"),
-      //     ],
-      //   ),
-      // ),
-      
       SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
