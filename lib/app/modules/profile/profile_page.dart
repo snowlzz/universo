@@ -80,7 +80,7 @@ class ProfilePageState extends State<ProfilePage> {
 
                               Observer(
                                 builder: (_) {
-                                return Text('Mãe: ${reg.controllerName.text}',
+                                return Text('Mãe: ${store.controllerMomName.text}',
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w600
@@ -115,7 +115,9 @@ class ProfilePageState extends State<ProfilePage> {
                                  );
                               }),
                               ),
-                              ElevatedButton(onPressed: (){Modular.to.pushReplacementNamed("/editprofile/");}, child: const Text("Editar"))
+                              ElevatedButton(onPressed: (){
+                                Modular.to.navigate("/editprofile");
+                              }, child: const Text("Editar"))
                             ],
                           ),
                         ]
@@ -144,7 +146,7 @@ class ProfilePageState extends State<ProfilePage> {
                 ),
                   ),
                 Container(
-                  height: MediaQuery.of(context).size.height/2.1,
+                  height: MediaQuery.of(context).size.height/1.9,
                   child: TabBarView(
                     children: [
                       GridView.count(

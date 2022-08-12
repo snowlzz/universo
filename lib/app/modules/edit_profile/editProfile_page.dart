@@ -19,12 +19,12 @@ class EditProfilePageState extends State<EditProfilePage> {
 return const LinearGradient(colors: [Color.fromARGB(255, 151, 115, 85), Color.fromARGB(255, 255, 193, 143)]);
     }
 
-    @override
-  void initState() {
-    // TODO: implement initState
-    // store.recuperaDados();
-    super.initState();
-  }
+  //   @override
+  // void initState() {
+  //   // TODO: implement initState
+  //   // store.recuperaDados();
+  //   super.initState();
+  // }
   final EditProfileStore store = Modular.get();
   KidModel model = KidModel();
 
@@ -274,7 +274,7 @@ return const LinearGradient(colors: [Color.fromARGB(255, 151, 115, 85), Color.fr
                                 const SizedBox(height: 10),
                                 TextField(
                                   inputFormatters: [maskDate],
-                                  controller: store.controllerBirthMom,
+                                  controller: store.controllerMomBirth,
                                   decoration: InputDecoration(
                                     labelText: 'Nascimento',
                                     hintText: "DD/MM/AAAA",

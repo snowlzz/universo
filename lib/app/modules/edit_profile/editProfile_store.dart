@@ -28,6 +28,12 @@ abstract class _EditProfileStoreBase with Store {
   TextEditingController controllerBirth = TextEditingController();
 
   @observable
+  TextEditingController controllerMomName = TextEditingController();
+
+  @observable
+  TextEditingController controllerMomBirth = TextEditingController();
+
+  @observable
   TextEditingController controllerWeeks = TextEditingController();
 
   @observable
@@ -81,9 +87,9 @@ abstract class _EditProfileStoreBase with Store {
       "semanas": model.weeks,
       "dias": model.days
     };
-    db.collection("users").doc(idLogado).update(data).then((firebaseUser) {
+    await db.collection("users").doc(idLogado).update(data).then((firebaseUser) {
       saveData();
-      Modular.to.popAndPushNamed("/home/");
+      
     });
 
   }

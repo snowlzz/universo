@@ -24,6 +24,12 @@ class CrescimentoPageState extends State<CrescimentoPage> {
       appBar: AppBar(
         title: const Text("Crescimento"),
         centerTitle: true,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios_new),
+          onPressed: (){
+             Modular.to.pushReplacementNamed("/home/");
+          },
+        ),
       ),
       body: SingleChildScrollView(
         child: Container(

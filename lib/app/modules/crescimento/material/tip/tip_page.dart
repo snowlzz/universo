@@ -22,7 +22,7 @@ class TipPageState extends State<TipPage> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new),
           onPressed: (){
-             Modular.to.popAndPushNamed("/crescimento");
+             Modular.to.pushNamed("/crescimento/");
           },
         ),
       ),
