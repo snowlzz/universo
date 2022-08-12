@@ -297,7 +297,7 @@ class EditProfilePageState extends State<EditProfilePage> {
                         ),
                         onPressed: () {
                           store.saveData();
-                          Modular.to.pushReplacementNamed("/home/");
+                          Modular.to.pushNamed("/home/");
                           // Modular.to.pushReplacementNamed("/profile/");
                         },
                         child: const Text(

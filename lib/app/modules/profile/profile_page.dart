@@ -74,7 +74,7 @@ class ProfilePageState extends State<ProfilePage> {
 
                                 Observer(
                                 builder: (_){
-                                return Text('Mãe: Laura',
+                                return Text('Mãe: ${store.controllerMomName.text}',
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w600
@@ -88,7 +88,7 @@ class ProfilePageState extends State<ProfilePage> {
                               
                                 Observer(
                                 builder: (_){
-                                return Text('Criança: Gabriel',
+                                return Text('Criança: ${store.controllerKidName.text}',
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w600
@@ -101,7 +101,7 @@ class ProfilePageState extends State<ProfilePage> {
 
                               Observer(
                                 builder: (_){
-                                return Text('Aniversario: 09/11/1999',
+                                return Text('Aniversario: ${store.controllerBirth.text}',
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w600
@@ -116,7 +116,7 @@ class ProfilePageState extends State<ProfilePage> {
                         ),
             
                            Padding(
-                             padding: const EdgeInsets.only(bottom: 20),
+                             padding: const EdgeInsets.only(bottom: 0),
                              child: Observer(
                               builder: (_) {
                                return CircleAvatar(
@@ -126,9 +126,10 @@ class ProfilePageState extends State<ProfilePage> {
                                  );
                               }),
                               ),
-                              ElevatedButton(onPressed: (){Modular.to.pushReplacementNamed("/editprofile/");}, child: const Text("Editar"))
+                              
                             ],
                           ),
+                          ElevatedButton(onPressed: (){Modular.to.pushReplacementNamed("/editprofile/");}, child: const Text("Editar"))
                         ]
                       ),
                     )
@@ -155,7 +156,7 @@ class ProfilePageState extends State<ProfilePage> {
                 ),
                   ),
                 Container(
-                  height: MediaQuery.of(context).size.height/2.1,
+                  height: MediaQuery.of(context).size.height *.585,
                   child: TabBarView(
                     children: [
                       GridView.count(

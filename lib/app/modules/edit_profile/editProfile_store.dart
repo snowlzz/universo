@@ -91,6 +91,7 @@ abstract class _EditProfileStoreBase with Store {
     db.collection("users").doc(idLogado).update(data).then((firebaseUser) {
       saveData();
       
+      
     });
 
   }

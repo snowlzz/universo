@@ -78,6 +78,7 @@ flutter:
     - images/
     - images/rest/46 IMAGEM 01.png
     - images1/
+    - images/buttons/BotaoUP.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

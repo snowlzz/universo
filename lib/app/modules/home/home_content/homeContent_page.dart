@@ -17,6 +17,10 @@ class HomeContentPageState extends State<HomeContentPage> {
   final HomeContentStore store = Modular.get();
   final RegisterStore reg = Modular.get();
 
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,43 +64,137 @@ class HomeContentPageState extends State<HomeContentPage> {
                       );
                     })),
                   ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width,
-                height: 175,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-            Card(
-                "Vegan",
-                "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/Resturant%20Image%20(1).png?alt=media&token=461162b1-686b-4b0e-a3ee-fae1cb8b5b33",
-                "8 min away"),
-            Card(
-                "Italian ",
-                "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/Restaurant%20Image.png?alt=media&token=43509b4c-269e-4279-8c88-36dc9ed27a66",
-                "12 min away"),
-            Card(
-                "Vegan",
-                "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/Resturant%20Image%20(1).png?alt=media&token=461162b1-686b-4b0e-a3ee-fae1cb8b5b33",
-                "15 min away"),
+                  
+      //         SizedBox(
+      //           width: MediaQuery.of(context).size.width,
+      //           height: 275,
+      //           child: ListView(
+      //             scrollDirection: Axis.horizontal,
+      //             children: [
+      //       Card(
+      //           "Vegan",
+      //           "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/Resturant%20Image%20(1).png?alt=media&token=461162b1-686b-4b0e-a3ee-fae1cb8b5b33",
+      //           "8 min away",
+                
+      //           ),
+                
+      //       Card(
+      //           "Italian ",
+      //           "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/Restaurant%20Image.png?alt=media&token=43509b4c-269e-4279-8c88-36dc9ed27a66",
+      //           "12 min away"),
+      //       Card(
+      //           "Vegan",
+      //           "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/Resturant%20Image%20(1).png?alt=media&token=461162b1-686b-4b0e-a3ee-fae1cb8b5b33",
+      //           "15 min away"),
+      //     ],
+      //   ),
+      // ),
+      
+      SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          
+      
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(onPressed: (){
+                Modular.to.pushNamed("/profile/");
+              },
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.white)
+              ), 
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * .3 ,
+                height: MediaQuery.of(context).size.height * .2 ,
+                child: Column(children: [
+                  const SizedBox(height: 15),
+                  Image.asset("images/buttons/BotaoUP.png", width: 100, height: 100),
+                  const SizedBox(height: 15),
+                  const Text("Cartilha", style: TextStyle(color: Colors.green),)
+                ]),
+              )),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(onPressed: (){
+                Modular.to.pushNamed("/profile/");
+              },
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.white)
+              ), 
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * .3 ,
+                height: MediaQuery.of(context).size.height * .2 ,
+                child: Column(children: [
+                  const SizedBox(height: 15),
+                  Image.asset("images1/botaokm.png", width: 100, height: 100),
+                  const SizedBox(height: 15),
+                  const Text("Noticias", style: TextStyle(color: Colors.green),)
+                ]),
+              )),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(onPressed: (){
+                Modular.to.pushNamed("/profile/");
+              },
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.white)
+              ), 
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * .3 ,
+                height: MediaQuery.of(context).size.height * .2 ,
+                child: Column(children: [
+                  const SizedBox(height: 15),
+                  Image.asset("images/buttons/BotaoUP.png", width: 100, height: 100),
+                  const SizedBox(height: 15),
+                  const Text("O Projeto", style: TextStyle(color: Colors.green),)
+                ]),
+              )),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(onPressed: (){
+                Modular.to.pushNamed("/profile/");
+              },
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.white)
+              ), 
+              child:  SizedBox(
+                width: MediaQuery.of(context).size.width * .3 ,
+                height: MediaQuery.of(context).size.height * .2 ,
+                child: Column(children: [
+                  const SizedBox(height: 15),
+                  Image.asset("images1/botao bate papo.png", width: 100, height: 100),
+                  const SizedBox(height: 15),
+                  const Text("Produções", style: TextStyle(color: Colors.green),)
+                ]),
+              )),
+            ),
           ],
         ),
       ),
-                
-                Container(
-                  width: MediaQuery.of(context).size.width/1.05,
-                  height: MediaQuery.of(context).size.height/1.688,
-                  alignment: Alignment.bottomCenter,
-                  decoration: const BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(26),
-                      topLeft: Radius.circular(26),
-                    )
-                  ),
-                )
-                ]
+      
+      const SizedBox(height: 10,),
+
+      
+          Container(
+            width: MediaQuery.of(context).size.width/1.05,
+            height: MediaQuery.of(context).size.height/1.688,
+            alignment: Alignment.bottomCenter,
+            decoration: const BoxDecoration(
+              color: Colors.green,
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(26),
+                topLeft: Radius.circular(26),
               )
             ),
+          )
+
+          ]
+        )
+      ),
 
       
     
@@ -111,60 +209,60 @@ class HomeContentPageState extends State<HomeContentPage> {
 
 
 
-class Card extends StatelessWidget {
-  final String text;
-  final String imageUrl;
-  final String subtitle;
+// class Card extends StatelessWidget {
+//   final String text;
+//   final String imageUrl;
+//   final String subtitle;
 
-  Card(this.text, this.imageUrl, this.subtitle, {Key? key}) : super(key: key);
+//   Card(this.text, this.imageUrl, this.subtitle, {Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 25.0, bottom: 15),
-      child: Container(
-        width: 150,
-        height: 150,
-        padding: const EdgeInsets.all(15.0),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(12.5),
-          boxShadow: [
-            BoxShadow(
-                offset: const Offset(10, 20),
-                blurRadius: 10,
-                spreadRadius: 0,
-                color: Colors.grey.withOpacity(.05)),
-          ],
-        ),
-        child: Column(
-          children: [
-            Image.network(imageUrl, height: 70, fit: BoxFit.cover),
-            Spacer(),
-            Text(text,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                )),
-            SizedBox(
-              height: 5,
-            ),
-            Text(
-              subtitle,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Colors.grey,
-                  fontWeight: FontWeight.normal,
-                  fontSize: 12),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Padding(
+//       padding: const EdgeInsets.only(left: 25.0, bottom: 15),
+//       child: Container(
+//         width: 150,
+//         height: 150,
+//         padding: const EdgeInsets.all(15.0),
+//         decoration: BoxDecoration(
+//           color: Colors.white,
+//           borderRadius: BorderRadius.circular(12.5),
+//           boxShadow: [
+//             BoxShadow(
+//                 offset: const Offset(10, 20),
+//                 blurRadius: 10,
+//                 spreadRadius: 0,
+//                 color: Colors.grey.withOpacity(.05)),
+//           ],
+//         ),
+//         child: Column(
+//           children: [
+//             Image.network(imageUrl, height: 70, fit: BoxFit.cover),
+//             Spacer(),
+//             Text(text,
+//                 textAlign: TextAlign.center,
+//                 style: TextStyle(
+//                   color: Colors.black,
+//                   fontWeight: FontWeight.bold,
+//                   fontSize: 18,
+//                 )),
+//             SizedBox(
+//               height: 5,
+//             ),
+//             Text(
+//               subtitle,
+//               textAlign: TextAlign.center,
+//               style: TextStyle(
+//                   color: Colors.grey,
+//                   fontWeight: FontWeight.normal,
+//                   fontSize: 12),
+//             ),
+//             SizedBox(
+//               height: 10,
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
