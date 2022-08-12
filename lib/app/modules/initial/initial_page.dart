@@ -75,6 +75,9 @@ class InitialPageState extends State<InitialPage> {
                     ),
               
                     SizedBox(height: 50),
+                    Center(child: 
+                        Text("${store.error}", style: TextStyle(color: Colors.red, fontSize: 20),)
+                      ),
               
                     Padding(
                       padding: const EdgeInsets.only(top: 5),
@@ -87,7 +90,9 @@ class InitialPageState extends State<InitialPage> {
                               const Color.fromARGB(255, 255, 255, 255)),
                         ),
                         onPressed: () {
-                          store.signInWithEmailAndPassword(UserModel());
+                          store.error != null ? Center(
+                            child: Text("${store.error}")
+                          ) : store.signInWithEmailAndPassword(UserModel());
                         },
                         child: const Text(
                           "Entre agora!",
@@ -122,7 +127,9 @@ class InitialPageState extends State<InitialPage> {
                         )
                       ),
                     ),
-                    SizedBox(height: 150,)
+                    
+                    SizedBox(height: 150,),
+                  
                     
                   ],
                 ),
@@ -134,6 +141,9 @@ class InitialPageState extends State<InitialPage> {
     );
   }
 }
+  
+
+  
 
 // Container(
 //             color: Colors.blue,

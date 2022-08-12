@@ -4,6 +4,7 @@ import 'package:universo/app/modules/profile/profile_store.dart';
 import 'package:flutter/material.dart';
 
 import '../edit_profile/editProfile_store.dart';
+import '../models/kid_model.dart';
 import '../register/register_store.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -15,6 +16,8 @@ class ProfilePage extends StatefulWidget {
 class ProfilePageState extends State<ProfilePage> {
   final EditProfileStore store = Modular.get();
   final RegisterStore reg = Modular.get();
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -68,29 +71,37 @@ class ProfilePageState extends State<ProfilePage> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children:  <Widget>[
 
-                              Observer(
-                                builder: (_) {
-                                return Text('Nome: ${store.controllerKidName.text}',
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w600
-                                  ),
-                                );
-                              }),
 
-                              Observer(
-                                builder: (_) {
-                                return Text('Mãe: ${reg.controllerName.text}',
+                                Observer(
+                                builder: (_){
+                                return Text('Mãe: Laura',
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w600
-                                  ),
-                                );
-                              }),
+                                    ),
+                                  );
+                                  
+                                }
+                              ),
+                              
+
+                              
+                                Observer(
+                                builder: (_){
+                                return Text('Criança: Gabriel',
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600
+                                    ),
+                                  );
+                                  
+                                }
+                              ),
+                              
 
                               Observer(
                                 builder: (_){
-                                return Text('Aniversario: ${store.controllerBirth.text}',
+                                return Text('Aniversario: 09/11/1999',
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w600

@@ -14,12 +14,12 @@ class Tip13PageState extends State<Tip13Page> {
       appBar: AppBar(
         actions: <Widget>[
           Image.asset("images1/LogoTop.png"),
-          SizedBox(
+          const SizedBox(
             width: 10.0,
           )
         ],
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'Crescimento',
           style: TextStyle(
               fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.white),
@@ -27,16 +27,16 @@ class Tip13PageState extends State<Tip13Page> {
         elevation: 1.5,
       ),
       body: ListView(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         children: <Widget>[
 
           Container(
-            margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
+            margin: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
             width: 250.0,
             //height: 250.0,
             decoration: BoxDecoration(
                 border: Border.all(
-                    color: Color.fromARGB(255, 101, 188, 89),
+                    color: const Color.fromARGB(255, 101, 188, 89),
                     width: 3.0
                 )
             ),
@@ -45,9 +45,9 @@ class Tip13PageState extends State<Tip13Page> {
               children: <Widget>[
 
                 Container(
-                  color: Color.fromARGB(255, 101, 188, 89),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  color: const Color.fromARGB(255, 101, 188, 89),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Text(
                       'Verdades da amamentação',
                       textAlign: TextAlign.center,
@@ -60,8 +60,8 @@ class Tip13PageState extends State<Tip13Page> {
                   ),
                 ),
 
-                SizedBox(height: 20,),
-                Text(
+                const SizedBox(height: 20,),
+                const Text(
                   'Quanto mais a criança suga o peito, mais produz leite. (Verdade)',
                   style: TextStyle(
                     fontSize: 20,
@@ -70,8 +70,8 @@ class Tip13PageState extends State<Tip13Page> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       '\u27A2O hormônio responsável pela produção do leite, é produzido por meio da sucção (ato de retirar o leite) da criança.'
                           '\n\u27A2Quanto mais a criança mama no peito, mais leite a mamãe vai produzir.',
@@ -85,8 +85,8 @@ class Tip13PageState extends State<Tip13Page> {
                 ),
                 Image.asset('images1/IMAGEM 01.jpg'),
 
-                SizedBox(height: 20,),
-                Text(
+                const SizedBox(height: 20,),
+                const Text(
                   'O leite no início da mamada é ralo e o leite do final da mamada é mais grosso. (Verdade)',
                   style: TextStyle(
                     fontSize: 20,
@@ -95,8 +95,8 @@ class Tip13PageState extends State<Tip13Page> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       '\u27A2O primeiro leite que sai mata a sede da criança, rico em agua;'
                           '\n\u27A2O leite do final da mamada contem mais gordura, engordando a criança.',
@@ -110,8 +110,8 @@ class Tip13PageState extends State<Tip13Page> {
                 ),
                 Image.asset('images1/IMAGEM 02.jpg'),
 
-                SizedBox(height: 20,),
-                Text(
+                const SizedBox(height: 20,),
+                const Text(
                   'A amamentação traz benefícios por toda a vida da criança (Verdade)',
                   style: TextStyle(
                     fontSize: 20,
@@ -120,8 +120,8 @@ class Tip13PageState extends State<Tip13Page> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       '\u27A2A amamentação previne contra a obesidade, doenças '
                           'crônicas, como diabetes (aumento do açúcar no sangue)'
@@ -140,8 +140,8 @@ class Tip13PageState extends State<Tip13Page> {
                 ),
                 Image.asset('images1/IMAGEM 01.jpg'),
 
-                SizedBox(height: 20,),
-                Text(
+                const SizedBox(height: 20,),
+                const Text(
                   'Chupeta e mamadeira atrapalham a amamentação (Verdade)',
                   style: TextStyle(
                     fontSize: 20,
@@ -150,8 +150,8 @@ class Tip13PageState extends State<Tip13Page> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       '\u27A2A criança pode confundir os bicos, sendo que na '
                           'mamadeira ela não precisa fazer força para sugar o '
@@ -167,8 +167,8 @@ class Tip13PageState extends State<Tip13Page> {
                 ),
                 Image.asset('images1/IMAGEM 03.jpg'),
 
-                SizedBox(height: 20,),
-                Text(
+                const SizedBox(height: 20,),
+                const Text(
                   'Não existe idade limite para amamentar o bebê. (Verdade)',
                   style: TextStyle(
                     fontSize: 20,
@@ -177,8 +177,8 @@ class Tip13PageState extends State<Tip13Page> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       '\u27A2É recomendado amamentar exclusivamente até o sexto'
                           ' mês e complementar até dois anos, mas pode passar '
@@ -198,12 +198,12 @@ class Tip13PageState extends State<Tip13Page> {
           ),
 
           Container(
-            margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
+            margin: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
             width: 250.0,
             //height: 250.0,
             decoration: BoxDecoration(
                 border: Border.all(
-                    color: Color.fromARGB(255, 101, 188, 89),
+                    color: const Color.fromARGB(255, 101, 188, 89),
                     width: 3.0
                 )
             ),
@@ -212,9 +212,9 @@ class Tip13PageState extends State<Tip13Page> {
               children: <Widget>[
 
                 Container(
-                  color: Color.fromARGB(255, 101, 188, 89),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  color: const Color.fromARGB(255, 101, 188, 89),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Text(
                       'Mitos sobre a amamentação',
                       textAlign: TextAlign.center,
@@ -227,8 +227,8 @@ class Tip13PageState extends State<Tip13Page> {
                   ),
                 ),
 
-                SizedBox(height: 20,),
-                Text(
+                const SizedBox(height: 20,),
+                const Text(
                   'Meu leite é fraco (FALSO)',
                   style: TextStyle(
                     fontSize: 20,
@@ -237,8 +237,8 @@ class Tip13PageState extends State<Tip13Page> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       '\u27A2Não existe leite fraco;'
                           '\n\u27A2O leite materno tem todos os nutrientes que '
@@ -254,8 +254,8 @@ class Tip13PageState extends State<Tip13Page> {
                 ),
                 Image.asset('images1/Gif---4.gif'),
 
-                SizedBox(height: 20,),
-                Text(
+                const SizedBox(height: 20,),
+                const Text(
                   'Dar de mamar faz os peitos caírem. (FALSO)',
                   style: TextStyle(
                     fontSize: 20,
@@ -264,8 +264,8 @@ class Tip13PageState extends State<Tip13Page> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       '\u27A2A flacidez da mama depende de vários fatores: idade, ganho de peso, fator genético.'
                           '\n\u27A2Amamentação não causa alteração no formato da mama.',
@@ -279,8 +279,8 @@ class Tip13PageState extends State<Tip13Page> {
                 ),
                 Image.asset('images1/Gif---2.gif'),
 
-                SizedBox(height: 20,),
-                Text(
+                const SizedBox(height: 20,),
+                const Text(
                   'Só meu leite não sustenta, e o bebê chora com fome. (FALSO)',
                   style: TextStyle(
                     fontSize: 20,
@@ -289,8 +289,8 @@ class Tip13PageState extends State<Tip13Page> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       '\u27A2A criança chora por vários motivos além da fome, '
                           'pode estar com cólica, frio ou calor, molhado, ou '
@@ -311,8 +311,8 @@ class Tip13PageState extends State<Tip13Page> {
                 ),
                 Image.asset('images1/gif novo 01.gif'),
 
-                SizedBox(height: 20,),
-                Text(
+                const SizedBox(height: 20,),
+                const Text(
                   'Criança que nasceu prematura (antes do tempo) não deve mamar no peito. (FALSO)',
                   style: TextStyle(
                     fontSize: 20,
@@ -326,7 +326,7 @@ class Tip13PageState extends State<Tip13Page> {
                   child: RichText(
                     textAlign: TextAlign.justify,
                     text: TextSpan(
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.normal,
                           color: Colors.black,
@@ -344,23 +344,23 @@ class Tip13PageState extends State<Tip13Page> {
                           TextSpan(
                               text: '\u279CCopinho',
                               recognizer: TapGestureRecognizer(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Colors.blue,
                                   fontWeight: FontWeight.w700,
                                   decoration: TextDecoration.underline
                               )
                           ),
-                          TextSpan(text: ' e '),
+                          const TextSpan(text: ' e '),
                           TextSpan(
                               text: '\u279CRelactação',
                               recognizer: TapGestureRecognizer(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Colors.blue,
                                   fontWeight: FontWeight.w700,
                                   decoration: TextDecoration.underline
                               )
                           ),
-                          TextSpan(
+                          const TextSpan(
                             text: ' que você vai ser direcionado as orientações '
                                 'disponibilizadas no aplicativo sobre o tema.'
                           )
@@ -370,8 +370,8 @@ class Tip13PageState extends State<Tip13Page> {
                 ),
                 Image.asset('images1/IMAGEM 03.jpg'),
 
-                SizedBox(height: 20,),
-                Text(
+                const SizedBox(height: 20,),
+                const Text(
                   'Mãe que está amamentando não pode trabalhar fora. (FALSO)',
                   style: TextStyle(
                     fontSize: 20,
@@ -385,7 +385,7 @@ class Tip13PageState extends State<Tip13Page> {
                   child: RichText(
                     textAlign: TextAlign.justify,
                     text: TextSpan(
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.normal,
                           color: Colors.black,
@@ -399,13 +399,13 @@ class Tip13PageState extends State<Tip13Page> {
                           TextSpan(
                               text: '\u279CRetorno ao Trabalho',
                               recognizer: TapGestureRecognizer(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Colors.blue,
                                   fontWeight: FontWeight.w700,
                                   decoration: TextDecoration.underline
                               )
                           ),
-                          TextSpan(
+                          const TextSpan(
                               text: ', você será direcionada a informações '
                                   'disponíveis no aplicativo sobre o tema.'
                           )

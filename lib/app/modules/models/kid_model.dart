@@ -20,6 +20,8 @@ class KidModel {
   @observable
   String? idadeCorrigida;
 
+  
+
   @action
   setName(String value) => kidName = value;
   
@@ -42,7 +44,8 @@ class KidModel {
      Map<String, dynamic> map = {
       "criança": kidName, 
       "nasc.": birth,
-      "sexo": gender,
+      "genero": gender,
+      "semanas": weeks
       
       };
 

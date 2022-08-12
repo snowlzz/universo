@@ -7,6 +7,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import '../crescimento/material/tip/pages/tip1_page.dart';
 import '../desenvolvimento/desenvolvimento_Page.dart';
 import '../desenvolvimento/desenvolvimento_store.dart';
+import '../profile/profile_page.dart';
 import '../profile/profile_store.dart';
 import '../register/register_store.dart';
 import 'home_content/homeContent_store.dart';
@@ -24,6 +25,7 @@ class HomeModule extends Module {
   @override
   final List<ModularRoute> routes = [
     ChildRoute('/', child: (_, args) =>  const HomePage()),
+    ChildRoute('/profile', child: (_, args) =>  const ProfilePage()),
   ];
 
   

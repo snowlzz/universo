@@ -13,12 +13,12 @@ class Tip10PageState extends State<Tip10Page> {
       appBar: AppBar(
         actions: <Widget>[
           Image.asset("images/LogoTop.png"),
-          SizedBox(
+          const SizedBox(
             width: 10.0,
           )
         ],
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'Crescimento',
           style: TextStyle(
               fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.white),
@@ -26,23 +26,23 @@ class Tip10PageState extends State<Tip10Page> {
         elevation: 1.5,
       ),
       body: ListView(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         children: <Widget>[
           Container(
-            margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
+            margin: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
             width: 250.0,
             //height: 250.0,
             decoration: BoxDecoration(
                 border: Border.all(
-                    color: Color.fromARGB(255, 101, 188, 89),
+                    color: const Color.fromARGB(255, 101, 188, 89),
                     width: 3.0
                 )
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       'A criança não deve ser colocada na posição horizontal, '
                           'evitando a troca de fraldas nesse período, para que '
@@ -55,8 +55,8 @@ class Tip10PageState extends State<Tip10Page> {
                       )
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                     'Posições para arrotar:',
                     style: TextStyle(
@@ -68,13 +68,13 @@ class Tip10PageState extends State<Tip10Page> {
                   ),
                 ),
                 Image.asset('images1/IMAGEM 13.jpg'),
-                SizedBox(height: 20.0,),
+                const SizedBox(height: 20.0,),
                 Image.asset('images1/IMAGEM 14.jpg'),
               ],
             ),
           ),
-          SizedBox(height: 30.0,),
-          SizedBox(height: 30.0,),
+          const SizedBox(height: 30.0,),
+          const SizedBox(height: 30.0,),
         ],
       ),
     );

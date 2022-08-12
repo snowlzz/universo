@@ -16,13 +16,12 @@ class EditProfilePage extends StatefulWidget {
 }
 class EditProfilePageState extends State<EditProfilePage> {
   gradient2(){
-return const LinearGradient(colors: [Color.fromARGB(255, 151, 115, 85), Color.fromARGB(255, 255, 193, 143)]);
+      return const LinearGradient(colors: [Color.fromARGB(255, 151, 115, 85), Color.fromARGB(255, 255, 193, 143)]);
     }
 
     @override
   void initState() {
-    // TODO: implement initState
-    // store.recuperaDados();
+    store.recoveryData();
     super.initState();
   }
   final EditProfileStore store = Modular.get();
@@ -128,15 +127,17 @@ return const LinearGradient(colors: [Color.fromARGB(255, 151, 115, 85), Color.fr
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                TextField(
-                                  controller: store.controllerKidName,
-                                  decoration: InputDecoration(
-                                    labelText: 'Nome',
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(20)
-                                    )
-                                  ),
-                                ),
+                                
+                                  TextField(
+                                    controller: store.controllerKidName,
+                                    decoration: InputDecoration(
+                                      labelText: 'Nome da criança',
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(20)
+                                      )
+                                    ),
+                                  ),  
+                              
                                 const SizedBox(height: 10),
                                 TextField(
                                   inputFormatters: [maskDate],
@@ -216,7 +217,7 @@ return const LinearGradient(colors: [Color.fromARGB(255, 151, 115, 85), Color.fr
                         backgroundImage: NetworkImage(store.momURL),
                         child: Padding(
                           padding: const EdgeInsets.only(top: 20),
-                          child: store.upload
+                          child: store.upload1
                                 ? const CircularProgressIndicator()
                                 : Container()
                               ),
@@ -231,14 +232,14 @@ return const LinearGradient(colors: [Color.fromARGB(255, 151, 115, 85), Color.fr
                         child: const Text("Câmera",
                             style: TextStyle(color: Colors.white)),
                         onPressed: () {
-                          store.selectPhoto("camera");
+                          // store.selectMomPhoto("camera");
                         },
                       ),
                       TextButton(
                         child: const Text("Galeria",
                             style: TextStyle(color: Colors.white)),
                         onPressed: () {
-                          store.selectPhoto("galeria");
+                          // store.selectMomPhoto("galeria");
                         },
                       ),
                     ],
@@ -296,7 +297,8 @@ return const LinearGradient(colors: [Color.fromARGB(255, 151, 115, 85), Color.fr
                         ),
                         onPressed: () {
                           store.saveData();
-                          Modular.to.pushNamed("/home/");
+                          Modular.to.pushReplacementNamed("/home/");
+                          // Modular.to.pushReplacementNamed("/profile/");
                         },
                         child: const Text(
                           "Entre agora!",
@@ -306,7 +308,7 @@ return const LinearGradient(colors: [Color.fromARGB(255, 151, 115, 85), Color.fr
                               color: Colors.green),
                         )
                       ),
-                          SizedBox(height: 150,),
+                          const SizedBox(height: 150),
                               
                           
                 ]),

@@ -209,7 +209,7 @@ class TipPageState extends State<TipPage> {
                     )),
 
                 ElevatedButton(
-                  onPressed: (){}, 
+                  onPressed: (){Modular.to.pushNamed("/tip/tip16");}, 
                   child: const Text(
                     "Amamentação/fórmula e a introdução a alimentos",
                     textAlign: TextAlign.center,
@@ -220,9 +220,9 @@ class TipPageState extends State<TipPage> {
                     )),
 
                 ElevatedButton(
-                  onPressed: (){}, 
+                  onPressed: (){Modular.to.pushNamed("/tip/tip17"); }, 
                   child: const Text(
-                    "Amamentação/fórmula e a introdução a alimentos",
+                    "Introdução Alimentar",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 18,
@@ -230,7 +230,217 @@ class TipPageState extends State<TipPage> {
                     ),
                     )),
 
-                    SizedBox(
+                ElevatedButton(
+                  onPressed: (){Modular.to.pushNamed("/tip/tip18"); }, 
+                  child: const Text(
+                    "Introdução Alimentar",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
+                    ),
+                    )),
+
+                ElevatedButton(
+                  onPressed: (){Modular.to.pushNamed("/tip/tip19"); }, 
+                  child: const Text(
+                    "Introdução Alimentar",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
+                    ),
+                    )),
+
+                ElevatedButton(
+                  onPressed: (){Modular.to.pushNamed("/tip/tip20"); }, 
+                  child: const Text(
+                    "Introdução Alimentar",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
+                    ),
+                    )),
+
+                ElevatedButton(
+                  onPressed: (){Modular.to.pushNamed("/tip/tip21"); }, 
+                  child: const Text(
+                    "Introdução Alimentar",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
+                    ),
+                    )),
+
+                ElevatedButton(
+                  onPressed: (){Modular.to.pushNamed("/tip/tip22"); }, 
+                  child: const Text(
+                    "Introdução Alimentar",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
+                    ),
+                    )),
+
+                ElevatedButton(
+                  onPressed: (){Modular.to.pushNamed("/tip/tip23"); }, 
+                  child: const Text(
+                    "Introdução Alimentar",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
+                    ),
+                    )),
+
+                ElevatedButton(
+                  onPressed: (){Modular.to.pushNamed("/tip/tip24"); }, 
+                  child: const Text(
+                    "Introdução Alimentar",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
+                    ),
+                    )),
+
+                ElevatedButton(
+                  onPressed: (){Modular.to.pushNamed("/tip/tip25"); }, 
+                  child: const Text(
+                    "Introdução Alimentar",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
+                    ),
+                    )),
+
+                ElevatedButton(
+                  onPressed: (){Modular.to.pushNamed("/tip/tip26"); }, 
+                  child: const Text(
+                    "Introdução Alimentar",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
+                    ),
+                    )),
+
+                ElevatedButton(
+                  onPressed: (){Modular.to.pushNamed("/tip/tip27"); }, 
+                  child: const Text(
+                    "Introdução Alimentar",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
+                    ),
+                    )),
+
+                ElevatedButton(
+                  onPressed: (){Modular.to.pushNamed("/tip/tip28"); }, 
+                  child: const Text(
+                    "Introdução Alimentar",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
+                    ),
+                    )),
+
+                ElevatedButton(
+                  onPressed: (){Modular.to.pushNamed("/tip/tip29"); }, 
+                  child: const Text(
+                    "Introdução Alimentar",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
+                    ),
+                    )),
+
+                ElevatedButton(
+                  onPressed: (){Modular.to.pushNamed("/tip/tip30"); }, 
+                  child: const Text(
+                    "Introdução Alimentar",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
+                    ),
+                    )),
+
+                ElevatedButton(
+                  onPressed: (){Modular.to.pushNamed("/tip/tip31"); }, 
+                  child: const Text(
+                    "Introdução Alimentar",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
+                    ),
+                    )),
+
+                ElevatedButton(
+                  onPressed: (){Modular.to.pushNamed("/tip/tip32"); }, 
+                  child: const Text(
+                    "Introdução Alimentar",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
+                    ),
+                    )),
+
+                ElevatedButton(
+                  onPressed: (){Modular.to.pushNamed("/tip/tip33"); }, 
+                  child: const Text(
+                    "Introdução Alimentar",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
+                    ),
+                    )),
+
+                ElevatedButton(
+                  onPressed: (){Modular.to.pushNamed("/tip/tip34"); }, 
+                  child: const Text(
+                    "Introdução Alimentar",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
+                    ),
+                    )),
+
+                ElevatedButton(
+                  onPressed: (){Modular.to.pushNamed("/tip/tip35"); }, 
+                  child: const Text(
+                    "Introdução Alimentar",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
+                    ),
+                    )),
+
+                ElevatedButton(
+                  onPressed: (){Modular.to.pushNamed("/tip/tip36"); }, 
+                  child: const Text(
+                    "Introdução Alimentar",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
+                    ),
+                    )),
+
+
+                  SizedBox(
                   height: 50, 
                   child: OutlinedButton(
                     onPressed: (){

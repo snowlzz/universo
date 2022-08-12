@@ -25,18 +25,6 @@ abstract class _InitialStoreBase with Store {
   @observable
   bool loading = false;
 
-  // Future<UserModel?> login(UserModel user) async {
-  //   user.email = controllerEmail.text;
-  //   user.pass = controllerPass.text;
-  //   await auth.signInWithEmailAndPassword(email: user.email!, password: user.pass!)
-  //   .then((firebaseUser) { 
-  //     Modular.to.pushNamed('/home');
-  //   }).catchError((error){
-  //     error = 'Erro ao autenticar o usuario, verifique email e senha';
-  //     return error;
-  //   });
-  // }
-
   @action
   changeEmail(String value) => controllerEmail.text = value;
 
@@ -73,10 +61,11 @@ abstract class _InitialStoreBase with Store {
     user.pass = controllerPass.text;
     await Future.delayed(const Duration(seconds: 3)).whenComplete(() async {
       try {
-        await auth.signInWithEmailAndPassword(email: user.email!, password: user.pass!).then((firebaseUser) async {
+        await auth.signInWithEmailAndPassword(email: user.email!, password: user.pass!).then((firebaseUser)  async {
           if(usuarioLogado != null) loading = false;
           await Future.delayed(const Duration(seconds: 1), (){
             Modular.to.pushNamed("/home/");
+            print("sucesso");
           });
         });
         

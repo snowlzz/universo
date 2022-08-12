@@ -14,7 +14,6 @@ class ProfileModule extends Module  {
     Bind.lazySingleton((i) => ProfileStore()),
     Bind.lazySingleton((i) => EditProfileStore()),
     Bind.lazySingleton((i) => RegisterStore()),
-    // Bind.lazySingleton((i) => HStore()),
   ];
 
   @override

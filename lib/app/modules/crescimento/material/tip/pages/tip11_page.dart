@@ -14,13 +14,13 @@ class Tip11PageState extends State<Tip11Page> {
     
     return Scaffold(
       appBar: AppBar(
-        actions: <Widget>[
+        actions: const <Widget>[
           SizedBox(
             width: 10.0,
           )
         ],
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'Crescimento',
           style: TextStyle(
               fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.white),
@@ -28,11 +28,11 @@ class Tip11PageState extends State<Tip11Page> {
         elevation: 1.5,
       ),
       body: ListView(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         children: <Widget>[
 
-          SizedBox(height: 10.0,),
-          Text(
+          const SizedBox(height: 10.0,),
+          const Text(
             'Principais problemas com as mamas',
             style: TextStyle(
                 fontSize: 20.0,
@@ -41,15 +41,15 @@ class Tip11PageState extends State<Tip11Page> {
             ),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: 10.0,),
+          const SizedBox(height: 10.0,),
 
           Container(
-            margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
+            margin: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
             width: 250.0,
             //height: 250.0,
             decoration: BoxDecoration(
                 border: Border.all(
-                    color: Color.fromARGB(255, 101, 188, 89),
+                    color: const Color.fromARGB(255, 101, 188, 89),
                     width: 3.0
                 )
             ),
@@ -57,8 +57,8 @@ class Tip11PageState extends State<Tip11Page> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       'Os problemas relacionados com a mama ocorrem geralmente '
                           'nos primeiros meses da amamentação. Mas caso tenha '
@@ -73,8 +73,8 @@ class Tip11PageState extends State<Tip11Page> {
                       )
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       '1 - Bico da mama dolorido e/ou machucado'
                           '\n2 - Ingurgitamento mamário (mama empedrada)'
@@ -94,12 +94,12 @@ class Tip11PageState extends State<Tip11Page> {
           ),
 
           Container(
-            margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
+            margin: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
             width: 250.0,
             //height: 250.0,
             decoration: BoxDecoration(
                 border: Border.all(
-                    color: Color.fromARGB(255, 101, 188, 89),
+                    color: const Color.fromARGB(255, 101, 188, 89),
                     width: 3.0
                 )
             ),
@@ -108,9 +108,9 @@ class Tip11PageState extends State<Tip11Page> {
               children: <Widget>[
 
                 Container(
-                  color: Color.fromARGB(255, 101, 188, 89),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  color: const Color.fromARGB(255, 101, 188, 89),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Text(
                       '1 - Bico da mama dolorido e/ou machucado',
                       textAlign: TextAlign.center,
@@ -123,8 +123,8 @@ class Tip11PageState extends State<Tip11Page> {
                   ),
                 ),
 
-                SizedBox(height: 20.0,),
-                Text(
+                const SizedBox(height: 20.0,),
+                const Text(
                   'Causas:',
                   style: TextStyle(
                     fontSize: 20,
@@ -133,8 +133,8 @@ class Tip11PageState extends State<Tip11Page> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       '\u27A2Pega e posição da criança de forma errada;'
                           '\n\u27A2Bico do peito pequeno ou invertido (bico do '
@@ -152,8 +152,8 @@ class Tip11PageState extends State<Tip11Page> {
                 ),
                 Image.asset('images1/IMAGEM 11.jpg'),
 
-                SizedBox(height: 20.0,),
-                Text(
+                const SizedBox(height: 20.0,),
+                const Text(
                   'Condutas/ Prevenção:',
                   style: TextStyle(
                     fontSize: 20,
@@ -167,7 +167,7 @@ class Tip11PageState extends State<Tip11Page> {
                   child: RichText(
                     textAlign: TextAlign.justify,
                     text: TextSpan(
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.normal,
                         color: Colors.black,
@@ -191,13 +191,13 @@ class Tip11PageState extends State<Tip11Page> {
                         TextSpan(
                           text: '\u279COrdenha Manual',
                           recognizer: TapGestureRecognizer(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.w700,
                             decoration: TextDecoration.underline
                           )
                         ),
-                        TextSpan(
+                        const TextSpan(
                           text: '\n\u27A2Se a criança não largar o seio após a mamada'
                         ', introduzir o dedo mínimo (mindinho) ou indicador '
                         '(fura-bolo) para que a criança solte a mama.  Em caso'
@@ -207,23 +207,23 @@ class Tip11PageState extends State<Tip11Page> {
                             text: '\u279CPega da criança ao seio',
                             recognizer: TapGestureRecognizer(),
                               
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Colors.blue,
                                 fontWeight: FontWeight.w700,
                                 decoration: TextDecoration.underline
                             )
                         ),
-                        TextSpan(text:';\n\u27A2Não usar protetores para a mama;')
+                        const TextSpan(text:';\n\u27A2Não usar protetores para a mama;')
                       ]
                     ),
                   ),
                 ),
                 Image.asset('images1/Gif---3.gif'),
-                SizedBox(height: 10.0,),
+                const SizedBox(height: 10.0,),
                 Image.asset('images1/IMAGEM 10.jpg'),
 
-                SizedBox(height: 20.0,),
-                Text(
+                const SizedBox(height: 20.0,),
+                const Text(
                   'Dicas',
                   style: TextStyle(
                     fontSize: 20,
@@ -232,8 +232,8 @@ class Tip11PageState extends State<Tip11Page> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       '\u27A2Corrigir a pega e posição da criança;'
                           '\n\u27A2A mamãe deve continuar a amamentar mesmo com'
@@ -259,12 +259,12 @@ class Tip11PageState extends State<Tip11Page> {
           ),
 
           Container(
-            margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
+            margin: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
             width: 250.0,
             //height: 250.0,
             decoration: BoxDecoration(
                 border: Border.all(
-                    color: Color.fromARGB(255, 101, 188, 89),
+                    color: const Color.fromARGB(255, 101, 188, 89),
                     width: 3.0
                 )
             ),
@@ -273,9 +273,9 @@ class Tip11PageState extends State<Tip11Page> {
               children: <Widget>[
 
                 Container(
-                  color: Color.fromARGB(255, 101, 188, 89),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  color: const Color.fromARGB(255, 101, 188, 89),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Text(
                       '2 - Ingurgitamento mamário (mama empedrada)',
                       textAlign: TextAlign.center,
@@ -287,8 +287,8 @@ class Tip11PageState extends State<Tip11Page> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       '\u27A2Mama fica endurecida e dolorida, o que dificulta a saída do leite;'
                           '\n\u27A2Mama pode ficar com pontos avermelhados e com a pele brilhante;'
@@ -302,9 +302,9 @@ class Tip11PageState extends State<Tip11Page> {
                   ),
                 ),
                 Image.asset('images1/figura 07.jpg'),
-                SizedBox(height: 20.0,),
+                const SizedBox(height: 20.0,),
 
-                Text(
+                const Text(
                   'Causas:',
                   style: TextStyle(
                     fontSize: 20,
@@ -313,8 +313,8 @@ class Tip11PageState extends State<Tip11Page> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       '\u27A2Produção de muito leite, e a criança não consegue '
                           'esvaziar o peito;'
@@ -330,9 +330,9 @@ class Tip11PageState extends State<Tip11Page> {
                       )
                   ),
                 ),
-                SizedBox(height: 20.0,),
+                const SizedBox(height: 20.0,),
 
-                Text(
+                const Text(
                   'Prevenção/ condutas:',
                   style: TextStyle(
                     fontSize: 20,
@@ -341,8 +341,8 @@ class Tip11PageState extends State<Tip11Page> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       '\u27A2Procurar um profissional de saúde para orientação;'
                           '\n\u27A2Se a parte escura da mama (aréola) estiver '
@@ -372,9 +372,9 @@ class Tip11PageState extends State<Tip11Page> {
                   ),
                 ),
                 Image.asset('images1/Gif---3.gif'),
-                SizedBox(height: 20.0,),
+                const SizedBox(height: 20.0,),
 
-                Text(
+                const Text(
                   'Dicas:',
                   style: TextStyle(
                     fontSize: 20,
@@ -383,8 +383,8 @@ class Tip11PageState extends State<Tip11Page> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       '\u27A2Fique de olha na pega e posição da criança se estão corretas;'
                           '\n\u27A2Não pare de amamentar.',
@@ -403,12 +403,12 @@ class Tip11PageState extends State<Tip11Page> {
           ),
 
           Container(
-            margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
+            margin: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
             width: 250.0,
             //height: 250.0,
             decoration: BoxDecoration(
                 border: Border.all(
-                    color: Color.fromARGB(255, 101, 188, 89),
+                    color: const Color.fromARGB(255, 101, 188, 89),
                     width: 3.0
                 )
             ),
@@ -417,9 +417,9 @@ class Tip11PageState extends State<Tip11Page> {
               children: <Widget>[
 
                 Container(
-                  color: Color.fromARGB(255, 101, 188, 89),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  color: const Color.fromARGB(255, 101, 188, 89),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Text(
                       '3 - Mastite (Inflamação da mama)',
                       textAlign: TextAlign.center,
@@ -431,9 +431,9 @@ class Tip11PageState extends State<Tip11Page> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20.0,),
+                const SizedBox(height: 20.0,),
 
-                Text(
+                const Text(
                   'Característica da mama:',
                   style: TextStyle(
                     fontSize: 20,
@@ -442,8 +442,8 @@ class Tip11PageState extends State<Tip11Page> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                     'Mama muito dolorida, endurecida, pele avermelhada e estendida (pele esticada).',
                     style: TextStyle(
@@ -456,8 +456,8 @@ class Tip11PageState extends State<Tip11Page> {
                 ),
                 Image.asset('images1/figura 07.jpg'),
 
-                SizedBox(height: 20.0,),
-                Text(
+                const SizedBox(height: 20.0,),
+                const Text(
                   'Causas:',
                   style: TextStyle(
                     fontSize: 20,
@@ -466,8 +466,8 @@ class Tip11PageState extends State<Tip11Page> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       '\u27A2Pega e posição inadequada;'
                           '\n\u27A2Redução do número de mamadas;'
@@ -486,8 +486,8 @@ class Tip11PageState extends State<Tip11Page> {
                 ),
                 Image.asset('images1/IMAGEM 11.jpg'),
 
-                SizedBox(height: 20.0,),
-                Text(
+                const SizedBox(height: 20.0,),
+                const Text(
                   'Prevenção/ Conduta:',
                   style: TextStyle(
                     fontSize: 20,
@@ -496,8 +496,8 @@ class Tip11PageState extends State<Tip11Page> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       '\u27A2Procure imediatamente um profissional de saúde para'
                           ' orientações e tratamento;'
@@ -517,8 +517,8 @@ class Tip11PageState extends State<Tip11Page> {
                 ),
                 Image.asset('images1/imagem nova 01.png'),
 
-                SizedBox(height: 20.0,),
-                Text(
+                const SizedBox(height: 20.0,),
+                const Text(
                   'Dicas',
                   style: TextStyle(
                     fontSize: 20,
@@ -527,8 +527,8 @@ class Tip11PageState extends State<Tip11Page> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       '\u27A2Não suspender a amamentação na mama afetada;'
                           '\n\u27A2Seguir corretamente as orientações e utilizar as medicações prescritas pelo médico;'

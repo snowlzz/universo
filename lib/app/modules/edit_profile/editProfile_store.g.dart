@@ -73,6 +73,38 @@ mixin _$EditProfileStore on _EditProfileStoreBase, Store {
     });
   }
 
+  late final _$controllerMomNameAtom =
+      Atom(name: '_EditProfileStoreBase.controllerMomName', context: context);
+
+  @override
+  TextEditingController get controllerMomName {
+    _$controllerMomNameAtom.reportRead();
+    return super.controllerMomName;
+  }
+
+  @override
+  set controllerMomName(TextEditingController value) {
+    _$controllerMomNameAtom.reportWrite(value, super.controllerMomName, () {
+      super.controllerMomName = value;
+    });
+  }
+
+  late final _$controllerBirthMomAtom =
+      Atom(name: '_EditProfileStoreBase.controllerBirthMom', context: context);
+
+  @override
+  TextEditingController get controllerBirthMom {
+    _$controllerBirthMomAtom.reportRead();
+    return super.controllerBirthMom;
+  }
+
+  @override
+  set controllerBirthMom(TextEditingController value) {
+    _$controllerBirthMomAtom.reportWrite(value, super.controllerBirthMom, () {
+      super.controllerBirthMom = value;
+    });
+  }
+
   late final _$idadeCorrigidaAtom =
       Atom(name: '_EditProfileStoreBase.idadeCorrigida', context: context);
 
@@ -169,6 +201,22 @@ mixin _$EditProfileStore on _EditProfileStoreBase, Store {
     });
   }
 
+  late final _$upload1Atom =
+      Atom(name: '_EditProfileStoreBase.upload1', context: context);
+
+  @override
+  bool get upload1 {
+    _$upload1Atom.reportRead();
+    return super.upload1;
+  }
+
+  @override
+  set upload1(bool value) {
+    _$upload1Atom.reportWrite(value, super.upload1, () {
+      super.upload1 = value;
+    });
+  }
+
   late final _$photoURLAtom =
       Atom(name: '_EditProfileStoreBase.photoURL', context: context);
 
@@ -224,12 +272,15 @@ controllerKidName: ${controllerKidName},
 controllerBirth: ${controllerBirth},
 controllerWeeks: ${controllerWeeks},
 controllerDays: ${controllerDays},
+controllerMomName: ${controllerMomName},
+controllerBirthMom: ${controllerBirthMom},
 idadeCorrigida: ${idadeCorrigida},
 idLogado: ${idLogado},
 gestation: ${gestation},
 kidPhoto: ${kidPhoto},
 momPhoto: ${momPhoto},
 upload: ${upload},
+upload1: ${upload1},
 photoURL: ${photoURL},
 momURL: ${momURL},
 escolhaUser: ${escolhaUser}

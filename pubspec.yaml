@@ -110,6 +110,6 @@ vars:
   get: flutter pub get
 
 scripts:
-  mobx: flutter pub run build_runner watch --delete-conflicting-outputs
+  mobx: flutter pub run build_runner watch --delete-conflicting-outputs --use-polling-watcher
   clean: flutter clean cache
   get: flutter pub get

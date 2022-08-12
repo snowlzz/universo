@@ -13,13 +13,13 @@ class Tip9PageState extends State<Tip9Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: <Widget>[
+        actions: const <Widget>[
           SizedBox(
             width: 10.0,
           )
         ],
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'Crescimento',
           style: TextStyle(
               fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.white),
@@ -27,10 +27,10 @@ class Tip9PageState extends State<Tip9Page> {
         elevation: 1.5,
       ),
       body: ListView(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         children: <Widget>[
-          SizedBox(height: 30.0,),
-          Text(
+          const SizedBox(height: 30.0,),
+          const Text(
             'Aleitamento materno em livre demanda',
             style: TextStyle(
                 fontSize: 22.0,
@@ -39,7 +39,7 @@ class Tip9PageState extends State<Tip9Page> {
             ),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: 30.0,),
+          const SizedBox(height: 30.0,),
           imageContent('images/rest/46 IMAGEM 01.png', textContent('',
             '\u27A2Sempre que o bebê quiser, de dia ou de noite, sem '
                 'restrição de horários e duração da mamada (livre demanda);\n\n'
@@ -50,19 +50,19 @@ class Tip9PageState extends State<Tip9Page> {
                 ' com carinho para que ela possa mamar.'
           )),
           Container(
-            margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
+            margin: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
             width: 250.0,
             //height: 250.0,
             decoration: BoxDecoration(
                 border: Border.all(
-                    color: Color.fromARGB(255, 101, 188, 89),
+                    color: const Color.fromARGB(255, 101, 188, 89),
                     width: 3.0
                 )
             ),
             child: Column(
               children: <Widget>[
-                SizedBox(height: 10.0,),
-                Text(
+                const SizedBox(height: 10.0,),
+                const Text(
                   '• Sinais que indicam que a criança está satisfeita e '
                       'alimentando adequadamente: ',
                   style: TextStyle(
@@ -72,10 +72,10 @@ class Tip9PageState extends State<Tip9Page> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 10.0,),
+                const SizedBox(height: 10.0,),
                 Image.asset('images1/gif novo 01.gif'),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Text(
                       '\u27A2Durante a amamentação, a cada uma ou duas sugadas, a '
                           'criança engole o leite (ruído da criança engolindo o leite'
@@ -102,8 +102,8 @@ class Tip9PageState extends State<Tip9Page> {
             ),
           ),
 
-          SizedBox(height: 30.0,),
-          SizedBox(height: 30.0,),
+          const SizedBox(height: 30.0,),
+          const SizedBox(height: 30.0,),
         ],
       ),
     );
