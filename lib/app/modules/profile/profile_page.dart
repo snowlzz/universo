@@ -61,11 +61,11 @@ class ProfilePageState extends State<ProfilePage> {
                   child: Column(
                     children: <Widget>[
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
                         Padding(
                           
-                          padding: const EdgeInsets.only(left: 16),
+                          padding: const EdgeInsets.only(left: 20),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -74,7 +74,7 @@ class ProfilePageState extends State<ProfilePage> {
 
                                 Observer(
                                 builder: (_){
-                                return Text('Mãe: ${store.controllerMomName.text}',
+                                return Text('Mãe:   ${store.controllerMomName.text}',
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w600
@@ -88,7 +88,7 @@ class ProfilePageState extends State<ProfilePage> {
                               
                                 Observer(
                                 builder: (_){
-                                return Text('Criança: ${store.controllerKidName.text}',
+                                return Text('Criança:   ${store.controllerKidName.text}',
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w600
@@ -101,7 +101,7 @@ class ProfilePageState extends State<ProfilePage> {
 
                               Observer(
                                 builder: (_){
-                                return Text('Aniversario: ${store.controllerBirth.text}',
+                                return Text('Aniversario:   ${store.controllerBirth.text}',
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w600
@@ -116,7 +116,7 @@ class ProfilePageState extends State<ProfilePage> {
                         ),
             
                            Padding(
-                             padding: const EdgeInsets.only(bottom: 0),
+                             padding: const EdgeInsets.only(right: 20),
                              child: Observer(
                               builder: (_) {
                                return CircleAvatar(

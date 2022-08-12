@@ -69,13 +69,13 @@ Widget bottomNavigationBar() {
               
           ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.home_max_outlined),
+          icon: Icon(Icons.task_alt),
           label: "Tarefas",
               
           ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.home_max_outlined),
-          label: "Crescimento",
+          icon: Icon(Icons.tips_and_updates_rounded),
+          label: "Dicas",
               
           ),
         BottomNavigationBarItem(

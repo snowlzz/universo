@@ -1,6 +1,7 @@
 // ignore_for_file: unused_import
 
 import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:universo/app/modules/register/register_store.dart';
@@ -41,25 +42,12 @@ class RegisterPageState extends State<RegisterPage> {
               child: Column(
                 children: [
                   Image.asset(
-                    "images/logo/LogoMov.gif", width: 250,
+                    "images/logo/LogoMov.gif", width: 350,
                   ),
-
-                  Observer(builder: (_) {
-                  return Padding(
-                    padding: const EdgeInsets.only(top: 20, left: 50, right: 50),
-                    child: TextField(
-                      controller: store.controllerName,
-                      // onChanged: (value) => store.changeName,
-                      decoration: InputDecoration(
-                        // errorText: store.validatePass(),
-                      ),
-                    ),
-                  );
-                }),
                   
                   Observer(builder: (_) {
                     return Padding(
-                      padding: const EdgeInsets.only(top: 10, left: 50, right: 50),
+                      padding: const EdgeInsets.only(top: 60, left: 50, right: 50),
                       child: TextField(
                         controller: store.controllerEmail,
                         onChanged: (value) => store.changeEmail,
@@ -85,8 +73,11 @@ class RegisterPageState extends State<RegisterPage> {
                 }),
       
                 Padding(
-                  padding: const EdgeInsets.only(top: 18.0),
+                  padding: const EdgeInsets.only(top: 30),
                   child: ElevatedButton(
+                    style: ButtonStyle(
+                      // shape: MaterialStateProperty.all(OutlinedBorder.)
+                    ),
                     onPressed: store.isValid ? (){
                     store.register(UserModel());
                     Modular.to.pushReplacementNamed("/editprofile");
