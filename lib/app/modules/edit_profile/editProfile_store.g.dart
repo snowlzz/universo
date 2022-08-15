@@ -41,6 +41,38 @@ mixin _$EditProfileStore on _EditProfileStoreBase, Store {
     });
   }
 
+  late final _$controllerMomNameAtom =
+      Atom(name: '_EditProfileStoreBase.controllerMomName', context: context);
+
+  @override
+  TextEditingController get controllerMomName {
+    _$controllerMomNameAtom.reportRead();
+    return super.controllerMomName;
+  }
+
+  @override
+  set controllerMomName(TextEditingController value) {
+    _$controllerMomNameAtom.reportWrite(value, super.controllerMomName, () {
+      super.controllerMomName = value;
+    });
+  }
+
+  late final _$controllerMomBirthAtom =
+      Atom(name: '_EditProfileStoreBase.controllerMomBirth', context: context);
+
+  @override
+  TextEditingController get controllerMomBirth {
+    _$controllerMomBirthAtom.reportRead();
+    return super.controllerMomBirth;
+  }
+
+  @override
+  set controllerMomBirth(TextEditingController value) {
+    _$controllerMomBirthAtom.reportWrite(value, super.controllerMomBirth, () {
+      super.controllerMomBirth = value;
+    });
+  }
+
   late final _$controllerWeeksAtom =
       Atom(name: '_EditProfileStoreBase.controllerWeeks', context: context);
 
@@ -222,6 +254,8 @@ mixin _$EditProfileStore on _EditProfileStoreBase, Store {
     return '''
 controllerKidName: ${controllerKidName},
 controllerBirth: ${controllerBirth},
+controllerMomName: ${controllerMomName},
+controllerMomBirth: ${controllerMomBirth},
 controllerWeeks: ${controllerWeeks},
 controllerDays: ${controllerDays},
 idadeCorrigida: ${idadeCorrigida},
