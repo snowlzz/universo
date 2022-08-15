@@ -13,7 +13,6 @@ class InitialPage extends StatefulWidget {
 }
 class InitialPageState extends State<InitialPage> {
   final InitialStore store = Modular.get();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,6 +92,7 @@ class InitialPageState extends State<InitialPage> {
                           store.error != null ? Center(
                             child: Text("${store.error}")
                           ) : store.signInWithEmailAndPassword(UserModel());
+                          
                         },
                         child: const Text(
                           "Entre agora!",
