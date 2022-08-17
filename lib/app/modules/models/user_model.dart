@@ -4,7 +4,10 @@ class UserModel{
 
 
   @observable
-  String? name;
+  String? nameMom;
+
+  @observable
+  String? birthMom;
 
   @observable
   String? email;
@@ -20,7 +23,10 @@ class UserModel{
 
 
   @action 
-  changeName(String value) => name = value;
+  changeName(String value) => nameMom = value;
+
+  @action 
+  changeBirth(String value) => birthMom = value;
 
   @action 
   changeEmail(String value) => email = value;
@@ -31,7 +37,7 @@ class UserModel{
   
 
   Map<String, dynamic> toMap() {
-     Map<String, dynamic> map = {"nome": name, "email": email};
+     Map<String, dynamic> map = {"nome": nameMom, "email": email,  "nasc M": birthMom};
      return map;
   }
 
