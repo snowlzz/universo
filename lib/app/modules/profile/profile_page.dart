@@ -156,7 +156,7 @@ class ProfilePageState extends State<ProfilePage> {
                 ),
                   ),
                 Container(
-                  height: MediaQuery.of(context).size.height *.585,
+                  height: MediaQuery.of(context).size.height *.543,
                   child: TabBarView(
                     children: [
                       GridView.count(

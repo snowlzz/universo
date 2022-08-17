@@ -79,12 +79,12 @@ abstract class _RegisterStoreBase with Store {
     
 
     user.email = controllerEmail.text;
-    user.name = controllerName.text;
+    user.pass = controllerPass.text;
 
 
     Map<String, dynamic> data = {
-      "mãe" : user.name,
-      "email" : user.email
+      "email" : user.email,
+      "pass" : user.pass
     };
     db.collection("users").doc(idLogado).set(data);
 
