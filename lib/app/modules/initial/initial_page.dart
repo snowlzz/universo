@@ -89,9 +89,10 @@ class InitialPageState extends State<InitialPage> {
                               const Color.fromARGB(255, 255, 255, 255)),
                         ),
                         onPressed: () {
-                          store.error != null ? Center(
-                            child: Text("${store.error}")
-                          ) : store.signInWithEmailAndPassword(UserModel());
+                          // store.error != null ? Center(
+                          //   child: Text("${store.error}")
+                          // ) :
+                           store.signInWithEmailAndPassword(UserModel());
                           
                         },
                         child: const Text(
@@ -102,9 +103,7 @@ class InitialPageState extends State<InitialPage> {
                               color: Colors.green),
                         )
                       ),
-                    ),
-              
-              
+                    ),              
                     Padding(
                       padding: const EdgeInsets.only(top: 0),
                       child: ElevatedButton(
