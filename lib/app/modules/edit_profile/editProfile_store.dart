@@ -11,6 +11,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 
 import '../models/kid_model.dart';
+import '../models/user_model.dart';
 
 part 'editProfile_store.g.dart';
 
@@ -76,17 +77,23 @@ abstract class _EditProfileStoreBase with Store {
     User usuarioLogado = auth.currentUser!;
     idLogado = usuarioLogado.uid;
     KidModel model = KidModel();
+    UserModel user = UserModel();
     model.kidName = controllerKidName.text;
+    user.nameMom = controllerMomName.text;
+    user.birthMom = controllerBirthMom.text;
     model.birth = controllerBirth.text;
     model.weeks = controllerWeeks.text;
     model.days = controllerDays.text;
 
     Map<String, dynamic> data = {
-      "nome": model.kidName,
+      "mãe": user.nameMom,
+      "nasc m": user.birthMom,
+      "criança": model.kidName,
       "nasc": model.birth,
-      "genero": model.gender,
+      "genero": escolhaUser,
       "semanas": model.weeks,
-      "dias": model.days
+      "url mae": momURL,
+      "url kid":photoURL
     };
     db.collection("users").doc(idLogado).update(data).then((firebaseUser) {
       saveData();

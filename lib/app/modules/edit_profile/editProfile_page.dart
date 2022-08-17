@@ -232,14 +232,14 @@ class EditProfilePageState extends State<EditProfilePage> {
                         child: const Text("Câmera",
                             style: TextStyle(color: Colors.white)),
                         onPressed: () {
-                          // store.selectMomPhoto("camera");
+                          store.selectMomPhoto("camera");
                         },
                       ),
                       TextButton(
                         child: const Text("Galeria",
                             style: TextStyle(color: Colors.white)),
                         onPressed: () {
-                          // store.selectMomPhoto("galeria");
+                          store.selectMomPhoto("galeria");
                         },
                       ),
                     ],
