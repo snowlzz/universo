@@ -9,6 +9,6 @@ class CartilhaModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-    ChildRoute('/', child: (_, args) => CartilhaPage()),
+    ChildRoute('/', child: (_, args) => const CartilhaPage()),
   ];
 }

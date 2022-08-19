@@ -74,7 +74,7 @@ abstract class _RegisterStoreBase with Store {
     FirebaseAuth auth = FirebaseAuth.instance;
     UserModel user = UserModel();
     FirebaseFirestore db = FirebaseFirestore.instance;
-    User usuarioLogado =  auth.currentUser!;
+    User usuarioLogado =  await auth.currentUser!;
     idLogado = usuarioLogado.uid;
     
 
@@ -87,6 +87,7 @@ abstract class _RegisterStoreBase with Store {
       "pass" : user.pass
     };
     db.collection("users").doc(idLogado).set(data);
+    print("salvo");
 
   }
 

@@ -1,30 +1,24 @@
-// import 'package:mobx/mobx.dart';
+import 'package:mobx/mobx.dart';
 
-// class MomModel {
-  
-//   @observable
-//   String? momName;
+class MomModel {
+  @observable
+  String? momName;
 
-//   @observable
-//   String? momBirth;
+  @observable
+  String? momBirth;
 
+  @action
+  setName(String value) => momName = value;
 
-//   @action
-//   setName(String value) => momName = value;
-  
-//   @action
-//   setBirth(String value) => momBirth = value;
-  
+  @action
+  setBirth(String value) => momBirth = value;
 
-//   Map<String, dynamic> toMap() {
-//      Map<String, dynamic> map = {
-//       "mãe": momName, 
-//       "nasc. M": momBirth,
+  Map<String, dynamic> toMap() {
+    Map<String, dynamic> map = {
+      "mãe": momName,
+      "nasc. M": momBirth,
+    };
 
-      
-//       };
-
-//      return map;
-//   }
-
-// }
+    return map;
+  }
+}

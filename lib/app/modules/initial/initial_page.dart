@@ -1,5 +1,6 @@
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:universo/app/modules/edit_profile/editProfile_store.dart';
 import 'package:universo/app/modules/initial/initial_store.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,13 @@ class InitialPage extends StatefulWidget {
 }
 class InitialPageState extends State<InitialPage> {
   final InitialStore store = Modular.get();
+  final EditProfileStore ep = Modular.get();
+
+  // @override
+  // void initState() {
+  //   ep.recuperarDados();
+  //   super.initState();
+  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,6 +101,8 @@ class InitialPageState extends State<InitialPage> {
                           //   child: Text("${store.error}")
                           // ) :
                            store.signInWithEmailAndPassword(UserModel());
+                           ep.saveData();
+                          //  ep.recuperarDados();
                           
                         },
                         child: const Text(

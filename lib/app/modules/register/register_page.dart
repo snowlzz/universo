@@ -15,6 +15,7 @@ class RegisterPage extends StatefulWidget {
   @override
   RegisterPageState createState() => RegisterPageState();
 }
+
 class RegisterPageState extends State<RegisterPage> {
   final RegisterStore store = Modular.get();
 
@@ -22,7 +23,7 @@ class RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Registro"), 
+        title: const Text("Registro"),
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 255, 193, 143),
         elevation: 0,
@@ -42,12 +43,13 @@ class RegisterPageState extends State<RegisterPage> {
               child: Column(
                 children: [
                   Image.asset(
-                    "images/logo/LogoMov.gif", width: 350,
+                    "images/logo/LogoMov.gif",
+                    width: 350,
                   ),
-                  
                   Observer(builder: (_) {
                     return Padding(
-                      padding: const EdgeInsets.only(top: 60, left: 50, right: 50),
+                      padding:
+                          const EdgeInsets.only(top: 60, left: 50, right: 50),
                       child: TextField(
                         controller: store.controllerEmail,
                         onChanged: (value) => store.changeEmail,
@@ -57,36 +59,36 @@ class RegisterPageState extends State<RegisterPage> {
                       ),
                     );
                   }),
-      
                   Observer(builder: (_) {
-                  return Padding(
-                    padding: const EdgeInsets.only(top: 10, left: 50, right: 50),
-                    child: TextField(
-                      obscureText: true,
-                      controller: store.controllerPass,
-                      onChanged: (value) => store.changePass,
-                      decoration: InputDecoration(
-                        errorText: store.validatePass(),
+                    return Padding(
+                      padding:
+                          const EdgeInsets.only(top: 10, left: 50, right: 50),
+                      child: TextField(
+                        obscureText: true,
+                        controller: store.controllerPass,
+                        onChanged: (value) => store.changePass,
+                        decoration: InputDecoration(
+                          errorText: store.validatePass(),
+                        ),
                       ),
-                    ),
-                  );
-                }),
-      
-                Padding(
-                  padding: const EdgeInsets.only(top: 30),
-                  child: ElevatedButton(
-                    style: ButtonStyle(
-                      // shape: MaterialStateProperty.all(OutlinedBorder.)
-                    ),
-                    onPressed: store.isValid ? (){
-                    store.register(UserModel());
-                    Modular.to.pushReplacementNamed("/editprofile");
-                  } : null
-                  
-                  , child: const Text('Cadastrar')),
-                ),
-                
-      
+                    );
+                  }),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 30),
+                    child: ElevatedButton(
+                        style: ButtonStyle(
+                            // shape: MaterialStateProperty.all(OutlinedBorder)
+                            ),
+                        onPressed: store.isValid
+                            ? () {
+                                store.register(UserModel());
+                                // store.save();
+                                Modular.to
+                                    .pushReplacementNamed("/editprofile/");
+                              }
+                            : null,
+                        child: const Text('Cadastrar')),
+                  ),
                 ],
               ),
             ),

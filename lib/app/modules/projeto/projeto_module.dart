@@ -10,6 +10,6 @@ class ProjetoModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-    ChildRoute('/', child: (_, args) => ProjetoPage()),
+    ChildRoute('/', child: (_, args) => const ProjetoPage()),
   ];
 }

@@ -13,12 +13,12 @@ class Tip12PageState extends State<Tip12Page> {
       appBar: AppBar(
         actions: <Widget>[
           Image.asset("images1/LogoTop.png"),
-          SizedBox(
+          const SizedBox(
             width: 10.0,
           )
         ],
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'Crescimento',
           style: TextStyle(
               fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.white),
@@ -26,10 +26,10 @@ class Tip12PageState extends State<Tip12Page> {
         elevation: 1.5,
       ),
       body: ListView(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         children: <Widget>[
-          SizedBox(height: 30.0,),
-          Text(
+          const SizedBox(height: 30.0,),
+          const Text(
             'Não se esqueça de colocar a criança para arrotar!',
             style: TextStyle(
                 fontSize: 22.0,
@@ -38,7 +38,7 @@ class Tip12PageState extends State<Tip12Page> {
             ),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: 30.0,),
+          const SizedBox(height: 30.0,),
           content(
               'images1/IMAGEM 13.jpg',
               'Logo após as mamadas evite colocar na posição deitada, deve'
@@ -90,10 +90,10 @@ class Tip12PageState extends State<Tip12Page> {
 
   Widget content(String image, String text){
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
+      margin: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
       decoration: BoxDecoration(
           border: Border.all(
-              color: Color.fromARGB(255, 101, 188, 89),
+              color: const Color.fromARGB(255, 101, 188, 89),
               width: 3.0
           )
       ),
@@ -106,7 +106,7 @@ class Tip12PageState extends State<Tip12Page> {
             child: Text(
                 text,
                 textAlign: TextAlign.justify,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.normal,
                   color: Colors.black,

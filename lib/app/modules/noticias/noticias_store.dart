@@ -12,4 +12,6 @@ abstract class _NoticiasStoreBase with Store {
   void increment() {
     value++;
   } 
+
+  
 }

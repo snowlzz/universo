@@ -41,7 +41,6 @@ abstract class _EditProfileStoreBase with Store {
   @observable
   int? idadeCorrigida;
 
-
   @observable
   String? idLogado;
 
@@ -69,11 +68,13 @@ abstract class _EditProfileStoreBase with Store {
   @observable
   String? escolhaUser;
 
+    
+
   // SAVE DB
 
   Future saveData() async {
     FirebaseAuth auth = FirebaseAuth.instance;
-    FirebaseFirestore db = FirebaseFirestore.instance;
+    FirebaseFirestore db = await FirebaseFirestore.instance;
     User usuarioLogado = auth.currentUser!;
     idLogado = usuarioLogado.uid;
     KidModel model = KidModel();
@@ -102,20 +103,51 @@ abstract class _EditProfileStoreBase with Store {
     });
 
   }
-  recoveryData() {
-    FirebaseAuth auth = FirebaseAuth.instance;
-    User usuarioLogado = auth.currentUser!;
-    idLogado = usuarioLogado.uid;
-    FirebaseFirestore db = FirebaseFirestore.instance;
-    final docRef = db.collection("users").doc(idLogado);
-    docRef.get().then((DocumentSnapshot doc){
-      final data = doc.data as Map<String, dynamic>;
-      controllerKidName.text = data["crianca"];
-      controllerBirth.text = data["nasc"];
-      controllerWeeks.text = data["semanas"];
-    } );
-    return docRef;
+  
+  @observable
+  String kidName = '';
+
+  recover() {
+    kidName = controllerKidName.text;
+    return recover();
   }
+
+ 
+
+
+  recuperarDados() async {
+    FirebaseAuth auth = FirebaseAuth.instance;
+    User logged = auth.currentUser!;
+    idLogado = logged.uid;
+
+    FirebaseFirestore db = FirebaseFirestore.instance;
+    var snapshot =
+        await db.collection("users").doc(idLogado).get();
+
+    Map<String, dynamic>? dados = snapshot.data();
+    controllerKidName.text = dados!["criança"];
+    controllerMomName.text = dados["mãe"];
+    controllerBirth.text = dados["nasc"];
+    // if (dados["urlImg"] != null) {
+    //   urlRec = dados["urlImg"];
+    // }
+  }
+
+
+  // recoveryData() {
+  //   FirebaseAuth auth = FirebaseAuth.instance;
+  //   User usuarioLogado = auth.currentUser!;
+  //   idLogado = usuarioLogado.uid;
+  //   FirebaseFirestore db = FirebaseFirestore.instance;
+  //   final docRef = db.collection("users").doc(idLogado);
+  //   docRef.get().then((DocumentSnapshot doc){
+  //     final data = doc.data as Map<String, dynamic>;
+  //     controllerKidName.text = data["crianca"];
+  //     controllerBirth.text = data["nasc"];
+  //     controllerWeeks.text = data["semanas"];
+  //   } );
+  //   return docRef;
+  // }
 
 
   

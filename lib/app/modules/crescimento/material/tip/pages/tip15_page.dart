@@ -135,11 +135,11 @@ class Tip15PageState extends State<Tip15Page> {
             padding: const EdgeInsets.only(left: 20.0,right:20.0,bottom:40.0,top:20.0),
             child: Align(
               alignment: Alignment.bottomRight,
-              child: RaisedButton.icon(
+              child: ElevatedButton.icon(
 
-                elevation: 5,
-                color: const Color.fromARGB(255, 101, 188, 89),
-                shape: const StadiumBorder(),
+                // elevation: 5,
+                // color: const Color.fromARGB(255, 101, 188, 89),
+                // shape: const StadiumBorder(),
                 label: const Text(
                   'Seguem as tarefas',
                   style: TextStyle(

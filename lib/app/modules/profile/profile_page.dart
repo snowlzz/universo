@@ -88,7 +88,7 @@ class ProfilePageState extends State<ProfilePage> {
                               
                                 Observer(
                                 builder: (_){
-                                return Text('Criança:   ${store.controllerKidName.text}',
+                                return Text('Criança:   ${store.kidName}',
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w600

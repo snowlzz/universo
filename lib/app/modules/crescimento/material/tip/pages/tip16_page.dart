@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 
 class Tip16Page extends StatefulWidget {
@@ -14,12 +16,12 @@ class Tip16PageState extends State<Tip16Page> {
       appBar: AppBar(
         actions: <Widget>[
           Image.asset("images1/LogoTop.png"),
-          SizedBox(
+          const SizedBox(
             width: 10.0,
           )
         ],
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'Crescimento',
           style: TextStyle(
               fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.white),
@@ -28,14 +30,14 @@ class Tip16PageState extends State<Tip16Page> {
       ),
       body: PageView(
         // controller: _pageController,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         children: <Widget>[
           ListView(
-            padding: EdgeInsets.symmetric(horizontal: 20.0,vertical: 20.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 20.0),
             children: <Widget>[
               Image.asset('images1/Gif-1.gif',),
-              SizedBox(height: 20.0,),
-              Text('O leite materno é o melhor alimento para ser oferecido à criança.'
+              const SizedBox(height: 20.0,),
+              const Text('O leite materno é o melhor alimento para ser oferecido à criança.'
                   ' Algumas dificuldades podem surgir durante a amamentação, por isso'
                   ' preparamos um material com técnicas que podem facilitar a '
                   'transição para amamentação ou fórmula, com as indicações e '
@@ -46,14 +48,13 @@ class Tip16PageState extends State<Tip16Page> {
                 style: TextStyle(fontSize: 16.0),
               ),
 
-              SizedBox(height: 20.0,),
-              RaisedButton(
-                padding: EdgeInsets.all(15.0),
-                color: Color.fromARGB(255, 101, 188, 89),
+              const SizedBox(height: 20.0,),
+              ElevatedButton(
+                
                 onPressed: (){
                   // _pageController.jumpToPage(1);
                 },
-                child: Text(
+                child: const Text(
                   'Acessar material',
                   style: TextStyle(
                       fontSize: 20.0,
@@ -62,11 +63,11 @@ class Tip16PageState extends State<Tip16Page> {
                   ),
                 ),
               ),
-              SizedBox(height: 20.0,),
+              const SizedBox(height: 20.0,),
             ],
           ),
           ListView(
-            children: <Widget>[
+            children: const <Widget>[
               // GCARD('1	Alimentação por copinho',context,1,UID),
               // GCARD('2	Relactação/ Translactação - sondinha (tubo pequeno para'
               //     ' passagem do leite).',context,2,UID),
@@ -95,15 +96,15 @@ class Tip16PageState extends State<Tip16Page> {
       },
       child: Card(
         elevation: 2.0,
-        margin: EdgeInsets.fromLTRB(40,20.0,40,0.0),
+        margin: const EdgeInsets.fromLTRB(40,20.0,40,0.0),
         child: Container(
-          color: Color.fromARGB(20, 101, 188, 89),
+          color: const Color.fromARGB(20, 101, 188, 89),
           alignment: Alignment.center,
-          padding: EdgeInsets.all(40.0),
+          padding: const EdgeInsets.all(40.0),
           width: 300.0,
           child: Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
                 fontSize: 18.0,
                 fontWeight: FontWeight.w500
             ),

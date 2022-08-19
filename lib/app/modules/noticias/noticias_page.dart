@@ -1,4 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:universo/app/modules/crescimento/material/tip/pages/widgets/image_content.dart';
 import 'package:universo/app/modules/noticias/noticias_store.dart';
 import 'package:flutter/material.dart';
 
@@ -17,9 +18,28 @@ class NoticiasPageState extends State<NoticiasPage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Column(
+      body: ListView(
         children: <Widget>[
-          Placeholder()
+          imageContent('images/crescimento/1-4/initial.png',
+          textContent('OI\n', 'TUDO BEM?')
+          ),
+          imageContent('images/crescimento/1-4/initial.png',
+          textContent('OI\n', 'TUDO BEM?')
+          ),
+          imageContent('images/crescimento/1-4/initial.png',
+          textContent('OI\n', 'TUDO BEM?')
+          ),
+          imageContent('images/crescimento/1-4/initial.png',
+          textContent('OI\n', 'TUDO BEM?')
+          ),
+          imageContent('images/crescimento/1-4/initial.png',
+          textContent('OI\n', 'TUDO BEM?')
+          ),
+          imageContent('images/crescimento/1-4/initial.png',
+          textContent('OI\n', 'TUDO BEM?')
+          ),
+         
+          
         ],
       ),
     );

@@ -1,4 +1,8 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:universo/app/modules/cartilha/cartilha_module.dart';
+import 'package:universo/app/modules/noticias/noticias_module.dart';
+import 'package:universo/app/modules/producoes/producoes_module.dart';
+import 'package:universo/app/modules/projeto/projeto_module.dart';
 
 import 'modules/crescimento/crescimento_module.dart';
 import 'modules/crescimento/crescimento_store.dart';
@@ -37,6 +41,10 @@ class AppModule extends Module {
     ModuleRoute('/crescimento', module: CrescimentoModule()),
     ModuleRoute('/tip', module: TipModule()),
     ModuleRoute('/editprofile', module: EditProfileModule()),
+    ModuleRoute('/cartilha', module: CartilhaModule()),
+    ModuleRoute('/noticias', module: NoticiasModule()),
+    ModuleRoute('/projeto', module: ProjetoModule()),
+    ModuleRoute('/producoes', module: ProducoesModule()),
   ];
 
 }

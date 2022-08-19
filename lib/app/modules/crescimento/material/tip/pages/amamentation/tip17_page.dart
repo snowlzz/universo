@@ -15,12 +15,12 @@ class Tip17PageState extends State<Tip17Page> {
       appBar: AppBar(
         actions: <Widget>[
           Image.asset("images1/LogoTop.png"),
-          SizedBox(
+          const SizedBox(
             width: 10.0,
           )
         ],
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'Crescimento',
           style: TextStyle(
               fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.white),
@@ -29,14 +29,14 @@ class Tip17PageState extends State<Tip17Page> {
       ),
       body: PageView(
         // controller: _pageController,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         children: <Widget>[
           ListView(
-            padding: EdgeInsets.symmetric(horizontal: 20.0,vertical: 20.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 20.0),
             children: <Widget>[
               Image.asset('images1/fig79-11.jpeg',),
-              SizedBox(height: 20.0,),
-              Text('A amamentação deve ser exclusiva (somente o leite materno ou'
+              const SizedBox(height: 20.0,),
+              const Text('A amamentação deve ser exclusiva (somente o leite materno ou'
                   ' quando necessária a fórmula infantil) até o sexto mês de vida'
                   ' da criança. Após o sexto mês a amamentação/fórmula deve ser '
                   'mantida em livre demanda e a introdução de alimentos deve ser'
@@ -46,30 +46,29 @@ class Tip17PageState extends State<Tip17Page> {
                 textAlign: TextAlign.justify,
                 style: TextStyle(fontSize: 16.0),
               ),
-              SizedBox(height: 20.0,),
-              RaisedButton(
-                padding: EdgeInsets.all(15.0),
-                color: Color.fromARGB(255, 101, 188, 89),
+              const SizedBox(height: 20.0,),
+              ElevatedButton(
                 onPressed: (){
                   // _pageController.jumpToPage(1);
                 },
-                child: Text(
+                child: const Text(
                   'Acessar material',
-                  style: TextStyle(
+                  // ignore: unnecessary_const
+                  style: const TextStyle(
                       fontSize: 20.0,
                       fontWeight: FontWeight.w500,
                       color: Colors.black
                   ),
                 ),
               ),
-              SizedBox(height: 20.0,),
+              const SizedBox(height: 20.0,),
             ],
           ),
           GridView(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2
             ),
-            children: <Widget>[
+            children: const <Widget>[
               // GCARD('Leite materno/fórmula no complemento da alimentação da criança',context,1,UID,name),
               // GCARD('A introdução alimentar não é o início do desmame',context,2,UID,name),
               // GCARD('O leite materno pode ser oferecido após as refeições ou em caso de recusa',context,3,UID,name),
