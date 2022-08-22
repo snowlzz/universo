@@ -24,5 +24,6 @@ class HomeContentModule extends Module {
     ChildRoute('/noticias', child: (_, args) => const NoticiasPage()),
     ChildRoute('/projeto', child: (_, args) => const ProjetoPage()),
     ChildRoute('/producoes', child: (_, args) => const ProducoesPage()),
+
   ];
 }

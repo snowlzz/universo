@@ -5,6 +5,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:universo/app/modules/home/home_content/homeContent_store.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../edit_profile/editProfile_store.dart';
 import '../../register/register_store.dart';
@@ -21,15 +22,29 @@ class HomeContentPageState extends State<HomeContentPage> {
   final HomeContentStore store = Modular.get();
   final EditProfileStore ep = Modular.get();
 
+  final Uri url = Uri.parse('mailto:universoprematuro@gmail.com');
+
+
+
+  Future<void> _launchUrl() async {
+    if(!await canLaunchUrl(url)){
+      await launchUrl(url);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(onPressed: (){
+        _launchUrl();
+      }, child: Icon(Icons.mail, color: Colors.green,), backgroundColor: Colors.white),
       appBar: AppBar(
         title: const Text("Home"),
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 253, 158, 104),
         elevation: 0,
         leading: null,
+        
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -201,6 +216,11 @@ class HomeContentPageState extends State<HomeContentPage> {
                                         fontWeight: FontWeight.w600),
                                   );
                                 }),
+                                
+
+                                ElevatedButton(onPressed: (){
+                                  Modular.to.pushNamed("/contact");
+                                }, child: Text("oi")),
 
                             Padding(
                               padding: const EdgeInsets.only(top: 195.0),
@@ -208,29 +228,17 @@ class HomeContentPageState extends State<HomeContentPage> {
                                 radius: 60, 
                                 lineWidth: 5,
                                 percent: 90/100,
-                                center: Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                center: const Padding(
+                                  padding:  EdgeInsets.all(8.0),
                                   child: Text("Tarefas completas\n90%", textAlign: TextAlign.center,style: TextStyle(fontSize: 14, color: Colors.white, fontWeight: FontWeight.bold )),
                                 ),
                               ),
                             ),
                             
-                         
-
-                                // Observer(
-                                //   builder: (_){
-                                //   return Text('Mãe:   ${ep.controllerMomName.text}',
-                                //     style: const TextStyle(
-                                //       color: Colors.white,
-                                //       fontWeight: FontWeight.w600
-                                //       ),
-                                //     );
-
-                                //   }
-                                // ),
                               ],
                             ),
                           ),
+
 
                           Padding(
                             padding: const EdgeInsets.only(left: 95.0),

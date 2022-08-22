@@ -70,11 +70,11 @@ abstract class _RegisterStoreBase with Store {
 
 
   @action
-  save() async {
+  Future save() async {
     FirebaseAuth auth = FirebaseAuth.instance;
     UserModel user = UserModel();
     FirebaseFirestore db = FirebaseFirestore.instance;
-    User usuarioLogado =  await auth.currentUser!;
+    User usuarioLogado = auth.currentUser!;
     idLogado = usuarioLogado.uid;
     
 

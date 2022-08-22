@@ -9,6 +9,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:universo/app/modules/register/register_store.dart';
 
 import '../models/kid_model.dart';
 import '../models/user_model.dart';
@@ -79,12 +80,14 @@ abstract class _EditProfileStoreBase with Store {
     idLogado = usuarioLogado.uid;
     KidModel model = KidModel();
     UserModel user = UserModel();
+
     model.kidName = controllerKidName.text;
     user.nameMom = controllerMomName.text;
     user.birthMom = controllerBirthMom.text;
     model.birth = controllerBirth.text;
     model.weeks = controllerWeeks.text;
     model.days = controllerDays.text;
+
 
     Map<String, dynamic> data = {
       "mãe": user.nameMom,
@@ -103,36 +106,6 @@ abstract class _EditProfileStoreBase with Store {
     });
 
   }
-  
-  @observable
-  String kidName = '';
-
-  recover() {
-    kidName = controllerKidName.text;
-    return recover();
-  }
-
- 
-
-
-  recuperarDados() async {
-    FirebaseAuth auth = FirebaseAuth.instance;
-    User logged = auth.currentUser!;
-    idLogado = logged.uid;
-
-    FirebaseFirestore db = FirebaseFirestore.instance;
-    var snapshot =
-        await db.collection("users").doc(idLogado).get();
-
-    Map<String, dynamic>? dados = snapshot.data();
-    controllerKidName.text = dados!["criança"];
-    controllerMomName.text = dados["mãe"];
-    controllerBirth.text = dados["nasc"];
-    // if (dados["urlImg"] != null) {
-    //   urlRec = dados["urlImg"];
-    // }
-  }
-
 
   // recoveryData() {
   //   FirebaseAuth auth = FirebaseAuth.instance;

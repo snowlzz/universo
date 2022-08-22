@@ -45,6 +45,7 @@ class AppModule extends Module {
     ModuleRoute('/noticias', module: NoticiasModule()),
     ModuleRoute('/projeto', module: ProjetoModule()),
     ModuleRoute('/producoes', module: ProducoesModule()),
+
   ];
 
 }

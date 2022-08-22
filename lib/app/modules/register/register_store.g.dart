@@ -84,7 +84,7 @@ mixin _$RegisterStore on _RegisterStoreBase, Store {
       AsyncAction('_RegisterStoreBase.save', context: context);
 
   @override
-  Future save() {
+  Future<dynamic> save() {
     return _$saveAsyncAction.run(() => super.save());
   }
 

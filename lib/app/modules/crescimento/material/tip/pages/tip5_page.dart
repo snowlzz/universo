@@ -219,7 +219,7 @@ class Tip5PageState extends State<Tip5Page> {
                       )
                   ),
                 ),
-                Image.asset('images/crescimento/5-8/IMAGEM 07.jpg'),
+                Image.asset('images1/IMAGEM 07.jpg'),
               ],
             ),
           ),
@@ -269,7 +269,7 @@ class Tip5PageState extends State<Tip5Page> {
                       )
                   ),
                 ),
-                Image.asset('images/crescimento/5-8/IMAGEM 08.jpg'),
+                Image.asset('images1/IMAGEM 08.jpg'),
               ],
             ),
           ),

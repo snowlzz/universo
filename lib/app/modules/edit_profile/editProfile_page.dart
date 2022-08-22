@@ -185,19 +185,11 @@ class EditProfilePageState extends State<EditProfilePage> {
                                                         (String? escolha) {
                                                       store.escolhaUser =
                                                           escolha!;
-                                                    }
-                                                  );
-                                              }
-                                            ),
-                                          ]
-                                        ),
+                                                    });
+                                              }),
+                                            ]),
                                       ),
-                                    ]
-                                  )
-                                )
-                              )
-                            )
-                          ),
+                                    ]))))),
 
                 Observer(builder: (_) {
                   return Center(
@@ -288,7 +280,7 @@ class EditProfilePageState extends State<EditProfilePage> {
                           fontWeight: FontWeight.w600,
                           color: Colors.green),
                     )),
-                    OutlinedButton(
+                OutlinedButton(
                     style: ButtonStyle(
                       elevation: MaterialStateProperty.all(20),
                       shape: MaterialStateProperty.all(RoundedRectangleBorder(
@@ -297,7 +289,6 @@ class EditProfilePageState extends State<EditProfilePage> {
                           const Color.fromARGB(255, 255, 255, 255)),
                     ),
                     onPressed: () {
-                      store.recuperarDados();
                       // Modular.to.pushNamed("/home/");
                       // Modular.to.pushReplacementNamed("/profile/");
                     },
@@ -308,7 +299,7 @@ class EditProfilePageState extends State<EditProfilePage> {
                           fontWeight: FontWeight.w600,
                           color: Colors.green),
                     )),
-                
+
                 const SizedBox(height: 150),
               ]),
             ),

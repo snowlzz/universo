@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:universo/app/modules/profile/profile_store.dart';
@@ -16,7 +18,6 @@ class ProfilePage extends StatefulWidget {
 class ProfilePageState extends State<ProfilePage> {
   final EditProfileStore store = Modular.get();
   final RegisterStore reg = Modular.get();
-
 
 
   @override
@@ -88,7 +89,7 @@ class ProfilePageState extends State<ProfilePage> {
                               
                                 Observer(
                                 builder: (_){
-                                return Text('Criança:   ${store.kidName}',
+                                return Text('Criança:   ${store.controllerKidName.text}',
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w600
